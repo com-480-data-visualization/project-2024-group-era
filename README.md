@@ -1,10 +1,10 @@
 # Project of Data Visualization (COM-480)
 
-| Student's name | SCIPER |
-| -------------- | ------ |
-| | |
-| | |
-| | |
+| Student's name   | SCIPER |
+| --------------   | ------ |
+| Adriana Orellana |        |
+| Angel Zenteno    |        |
+| Jianan Xu        | 370489 |
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
