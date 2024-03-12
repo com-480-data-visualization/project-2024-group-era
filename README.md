@@ -3,7 +3,7 @@
 | Student's name   | SCIPER |
 | --------------   | ------ |
 | Adriana Orellana | 376792 |
-| Angel Zenteno    |        |
+| Angel Zenteno    | 376890 |
 | Jianan Xu        | 370489 |
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
