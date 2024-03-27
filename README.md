@@ -19,11 +19,13 @@ Please, fill the following sections about your project.
 
 ### Dataset
 
-> Find a dataset (or multiple) that you will explore. Assess the quality of the data it contains and how much preprocessing / data-cleaning it will require before tackling visualization. We recommend using a standard dataset as this course is not about scraping nor data processing.
+> We sourced our dataset from the [IUCN Red List](https://www.iucnredlist.org/support/contact), filtering animals categorized under various levels of conservation status, Extinct (EX), Extinct in The Wild (EW), Critically Endangered (CR), Endangered (EN), Vulnerable (VU), and Near Threatened (NT). Initially, the dataset contained 25,183 entries with 20 attributes each. To enhance our data, we wrote a script to scrape additional details through the IUCN Red List API, aiming for a comprehensive overview of conservation-challenged animals.
 >
-> Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
+> Our initial dataset faced challenges due to numerous empty fields, a result of limited information on these conservation-challenged animals. These gaps were non-informative for visualization purposes, necessitating data preprocessing and cleaning. We combined the CSV data with the scraped data, then diligently removed rows and columns with null values to ensure data integrity.
 >
-> [IUCN Red List](https://www.iucnredlist.org/support/contact), 
+> This process refined our dataset to include 1,799 animals, enriched to 64 attributes. Here is an example shows how our dataset looks like:
+
+
 
 ### Problematic
 
@@ -33,11 +35,11 @@ Please, fill the following sections about your project.
 >
 > **Overview, Motivation, and Target Audience**
 >
-> Our project aims to create a dynamic and informative webpage targeted primarily at students, fostering increased awareness about endangered animals. This initiative is driven by the belief that education and engagement can catalyze collective action towards animal conservation.
+> Our project aims to create a dynamic and informative webpage targeted primarily at students, fostering increased awareness about conservation-challenged animals. This initiative is driven by the belief that education and engagement can catalyze collective action towards animal conservation.
 >
 > **Visualization Content and Features**
 >
-> 1. **3D navigable globe:** A visualization showcasing the global distribution of endangered species, offering users a comprehensive understanding of their spread and hotspots.
+> 1. **3D navigable globe:** A visualization showcasing the global distribution of conservation-challenged animals, offering users a comprehensive understanding of their spread and hotspots.
 >
 > 2. **Species Profiles:** Detailed profiles for each species, including visuals and information on appearance, diet, habits, behaviors, and conservation measures.
 >
@@ -45,7 +47,7 @@ Please, fill the following sections about your project.
 >
 > 4. **Interactive Features:** We plan to integrate innovative interactive elements to further engage users:
 >
->    - **EcoSurvival Game:** A captivating game where participants match endangered animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
+>    - **EcoSurvival Game:** A captivating game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
 >
 >    - **ML EcoForecast:** An interactive machine learning model allowing users to simulate the impact of various conservation actions on species populations, visually demonstrating the potential outcomes of their efforts.
 >
@@ -61,13 +63,13 @@ Please, fill the following sections about your project.
 
 > **Originality**
 >
-> Our approach revolutionizes the way endangered animals data is presented by shifting from the traditional, static encyclopedic format to an engaging, dynamic user experience. We introduce a 3D navigable globe that embeds animal profiles, allowing users to explore species by region with simple gestures. This immersive interface is a departure from the norm,  inviting users to engage deeply with the content. Additionally, we innovate by integrating gamification or/and machine learning predictions through features like the EcoSurvival game or/and ML EcoForecast. These elements are designed not just for engagement but to spur users into conservation actions, a significant leap beyond the informational offerings of most sites. In conclusion, Our originality lies in these interactive and educational enhancements, drawing on diverse inspirations to make environmental awareness both informative and enjoyable.
+> Our approach revolutionizes the way conservation-challenged animals data is presented by shifting from the traditional, static encyclopedic format to an engaging, dynamic user experience. We introduce a 3D navigable globe that embeds animal profiles, allowing users to explore species by region with simple gestures. This immersive interface is a departure from the norm,  inviting users to engage deeply with the content. Additionally, we innovate by integrating gamification or/and machine learning predictions through features like the EcoSurvival game or/and ML EcoForecast. These elements are designed not just for engagement but to spur users into conservation actions, a significant leap beyond the informational offerings of most sites. In conclusion, Our originality lies in these interactive and educational enhancements, drawing on diverse inspirations to make environmental awareness both informative and enjoyable.
 >
 > **Source of Inspiration**
 >
 > After extensive brainstorming and reviewing some relevant websites,  we've identified several sources (shown as bellows) from which we're considering drawing  inspiration. With preliminary approval from our professors, we MAY adapt some of their innovative ideas to our project.
 >
-> [Species in Pieces](http://species-in-pieces.com/#), [react-globe.gl](https://vasturiano.github.io/react-globe.gl/)
+> [Species in Pieces](http://species-in-pieces.com/#), [react-globe.gl](https://vasturiano.github.io/react-globe.gl/), [Animalia](https://animalia.bio/)
 
 ## Milestone 2 (26th April, 5pm)
 
