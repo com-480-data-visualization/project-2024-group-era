@@ -61,7 +61,7 @@ Please, fill the following sections about your project.
 >
 > Our approach revolutionizes the way endangered animals data is presented by shifting from the traditional, static encyclopedic format to an engaging, dynamic user experience. We introduce a 3D navigable globe that embeds animal profiles, allowing users to explore species by region with simple gestures. This immersive interface is a departure from the norm,  inviting users to engage deeply with the content. Additionally, we innovate by integrating gamification or/and machine learning predictions through features like the EcoSurvival game or/and ML EcoForecast. These elements are designed not just for engagement but to spur users into conservation actions, a significant leap beyond the informational offerings of most sites. In conclusion, Our originality lies in these interactive and educational enhancements, drawing on diverse inspirations to make environmental awareness both informative and enjoyable.
 >
-> **Inspiration**
+> **Source of Inspiration**
 >
 > After extensive brainstorming and reviewing some relevant websites,  we've identified several sources (shown as bellows) from which we're considering drawing  inspiration. With preliminary approval from our professors, we MAY adapt some of their innovative ideas to our project.
 >
