@@ -28,9 +28,11 @@ Please, fill the following sections about your project.
 ### Problematic
 
 > **General Topic and Main Axis Development**
-> Every year, approximately 1,000 species face extinction, raising a critical question: Will humans become the only inhabitants of Earth after several centuries? This pressing concern underscores the urgency for immediate conservation actions. The foundation of effective animal protection lies in enhancing public awareness and consensus, with data serving as a pivotal tool for this purpose. Visualization acts as the conduit, bridging the gap between data and public perception.**Overview, **
 >
-> **Motivation, and Target Audience**
+> Every year, approximately 1,000 species face extinction, raising a critical question: Will humans become the only inhabitants of Earth after several centuries? This pressing concern underscores the urgency for immediate conservation actions. The foundation of effective animal protection lies in enhancing public awareness and consensus, with data serving as a pivotal tool for this purpose. Visualization acts as the conduit, bridging the gap between data and public perception.
+>
+> **Overview, Motivation, and Target Audience**
+>
 > Our project aims to create a dynamic and informative webpage targeted primarily at students, fostering increased awareness about endangered animals. This initiative is driven by the belief that education and engagement can catalyze collective action towards animal conservation.
 >
 > **Visualization Content and Features**
