@@ -19,13 +19,13 @@ Please, fill the following sections about your project.
 
 ### Dataset
 
-> We sourced our dataset from the [IUCN Red List](https://www.iucnredlist.org/support/contact), filtering animals categorized under various levels of conservation status, Extinct (EX), Extinct in The Wild (EW), Critically Endangered (CR), Endangered (EN), Vulnerable (VU), and Near Threatened (NT). Initially, the dataset contained 25,183 entries with 20 attributes each. To enhance our data, we wrote a script to scrape additional details through the IUCN Red List API, aiming for a comprehensive overview of conservation-challenged animals.
+> We sourced our dataset from the [IUCN Red List](https://www.iucnredlist.org/support/contact), focusing on animals classified under various conservation statuses: Extinct (EX), Extinct in the Wild (EW), Critically Endangered (CR), Endangered (EN), Vulnerable (VU), and Near Threatened (NT). The initial dataset, provided in CSV format, contained 25,183 entries, each detailing 20 attributes. To augment our data, we developed a script to scrap additional information through the IUCN Red List API, aiming for a comprehensive portrayal of conservation-challenged animals. The scrapped data dataset was a structured directory with 1,799 subfolders, each representing an individual animal and containing 6 JSON files with additional attributes.
 >
-> Our initial dataset faced challenges due to numerous empty fields, a result of limited information on these conservation-challenged animals. These gaps were non-informative for visualization purposes, necessitating data preprocessing and cleaning. We combined the CSV data with the scraped data, then diligently removed rows and columns with null values to ensure data integrity.
+> We identified that each animal is marked by a unique ID. However, the initial CSV dataset faced two significant challenges: (1) the duplication of some animal entries and (2) the presence of numerous empty fields, a consequence of the limited information available on these conservation-threatened species. These gaps detracted from the dataset's utility for visualization, necessitating a phase of data preprocessing and cleaning. We merged the CSV and scraped data, then carefully eliminated duplicate animal entries and attributes with null values to ensure data integrity.
 >
-> This process refined our dataset to include 1,799 animals, enriched to 64 attributes. Here is an example shows how our dataset looks like:
-
-
+> Through this rigorous process, we refined our dataset, in JSON format, to include 1,799 animals, now enriched with 64 attributes. Below is an example illustrating how our dataset is formatted:
+>
+> ![image-20240328002051292](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/image-20240328002051292.png)
 
 ### Problematic
 
