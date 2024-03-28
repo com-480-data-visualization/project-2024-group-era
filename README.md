@@ -74,7 +74,7 @@ For the visual part of our project, we intend to incorporate several features de
 
 Besides dataset pre-processing and cleaning mentioned in the **Dataset** section, we conducted exploratory data analysis. The details of pre-processing, cleaning, and EDA can be seen in [EDA.ipynb](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/EDA.ipynb). We present basic statistics as follows:
 
-1. The number of animals in each conservation status, where these categories represent:
+1. The number of animals in each conservation status, where categories represent:
    
 - NT: Near Threatened
 - VU: Vulnerable
