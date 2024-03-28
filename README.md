@@ -94,11 +94,11 @@ Please, fill the following sections about your project.
 >    | 18   | Shrubland - Temperate                             | 23     |
 >    | 19   | Shrubland - Mediterranean-type Shrubby Vegetation | 21     |
 >
-> 3. Top ten countries with the most endangered animals:![top](C:\Users\Jianan Xu\OneDrive\Desktop\top.png)
+> 3. Top ten countries with the most endangered animals:![top](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/top.png)
 >
 > 4. Progress of an animal's status over time; we chose Herichthys labridens (in Mexico) as an example:
 >
->    ![an animal](C:\Users\Jianan Xu\OneDrive\Desktop\an animal.png)
+>    ![an animal](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/an%20animal.png)
 >
 > 5. Main threats to animals:
 >
