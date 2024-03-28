@@ -45,7 +45,7 @@ The full dataset is at [./data_viz_animals/animals.json](https://github.com/Jian
 
 **General Topic and Main Axis Development**
 
-Every year, approximately 1,000 species face extinction, raising a critical question: Will humans become the only inhabitants of Earth after several centuries? This pressing concern underscores the urgency for immediate conservation actions. The foundation of effective animal protection lies in enhancing public awareness and consensus, with data serving as a tool for this purpose. Visualization acts as the conduit, bridging the gap between data and public perception.
+Every year, approximately between 1,000 and 30,000 species face extinction[[1]](#1), raising a critical question: Will humans become the only inhabitants of Earth after several centuries? This pressing concern underscores the urgency for immediate conservation actions. The foundation of effective animal protection lies in enhancing public awareness and consensus, with data serving as a tool for this purpose. Visualization acts as the conduit, bridging the gap between data and public perception.
 
 **Overview, Motivation, and Target Audience**
 
@@ -54,11 +54,13 @@ Our project aims to create a dynamic and informative webpage targeted primarily 
 **Visualization Content and Features**
 
 1. **3D navigable globe:** A visualization showcasing the global distribution of conservation-challenged animals, offering users a comprehensive understanding of their spread and hotspots.
-2. **Species Profiles:** Detailed profiles for each species, including visuals and information on appearance, diet, habits, behaviors, and conservation measures.
+2. **Species Profiles:** Detailed profiles for each species, including information on appearance, population, habitats, threats and conservation measures.
 3. **Educational Content:** Curated educational videos that highlight the importance of conservation efforts and inspire viewers to contribute to these causes.
 4. **Interactive Features:** We plan to integrate the following interactive element to further engage users:
 
 - **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
+
+<a id="1">[1]</a> Sisk, T. D., Launer, A. E., Switky, K. R., & Ehrlich, P. R. (1994). Identifying extinction threats. BioScience, 44(9), 592-604.
 
 ### Exploratory Data Analysis
 
