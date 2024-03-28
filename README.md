@@ -58,7 +58,7 @@ Our project aims to create a dynamic and informative webpage targeted primarily 
 For the visual part of our project, we intend to incorporate several features designed to raise awareness about endangered animals:
 
 1. **3D navigable globe:** A visualization showcasing the global distribution of conservation-challenged animals, offering users a comprehensive understanding of their spread and hotspots.
-2. **Species Profiles:** Detailed profiles for each animals, including information on appearance, population, habitats, threats, and conservation measures.
+2. **Species Profiles:** Detailed profiles for each animal, including information on appearance, population, habitats, threats, and conservation measures.
 3. **Educational Content:** Curated educational videos that highlight the importance of conservation efforts and inspire viewers to contribute to these causes.
 4. **Interactive Feature:** We plan to integrate the following interactive element to further engage users:
      - **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
