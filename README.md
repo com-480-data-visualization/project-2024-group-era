@@ -29,11 +29,13 @@ Our dataset was obtained from the [IUCN Red List](https://www.iucnredlist.org/su
 
 Initially, we identified that every animal has a unique ID. However, the initial CSV dataset faced two significant challenges: (1) the duplication of some animal entries and (2) the presence of numerous empty fields, a consequence of the limited information available on these conservation-threatened species. To transform our dataset into a valuable resource for visualization, we preprocessed and cleaned it. First, we merged the CSV and scraped data, then carefully eliminated duplicate animal entries and attributes with null values to ensure data integrity.
 
-Through this process, we transformed our dataset into JSON format, incorporating 1,799 animals, now with 39 attributes. Below is an example illustrating how our dataset is formatted:
+Through this process, we transformed our dataset into JSON format, incorporating 1,799 animals with 39 attributes. Below is an example illustrating how our dataset is formatted:
 
 ![image-20240328003235760](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/image-20240328003235760.png)
 
-The full dataset is at [./data_viz_animals/animals.json](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/data_viz_animals/animals.json).
+The final format ensures our dataset is ready for analysis and fits our project needs, as it organizes the data in a structured manner that is easily accessible for further interpretation.
+
+You can access the final dataset at [./data_viz_animals/animals.json](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/data_viz_animals/animals.json), while the raw data extracted from IUCN Red List API can be found within [./data_viz_animals/raw_data/](https://github.com/JiananAlvin/com480_data_viz_group_era/tree/master/data_viz_animals/raw_data) and the preprocessed csv originally provided by IUCN Red List is located at [./data_viz_animals/species.csv](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/data_viz_animals/species.csv)
 
 ### Problematic
 
@@ -45,7 +47,7 @@ The full dataset is at [./data_viz_animals/animals.json](https://github.com/Jian
 
 **General Topic and Main Axis Development**
 
-Every year, approximately between 1,000 and 30,000 species face extinction[[1]](#1), raising a critical question: Will humans become the only inhabitants of Earth after several centuries? This pressing concern underscores the urgency for immediate conservation actions. The foundation of effective animal protection lies in enhancing public awareness and consensus, with data serving as a tool for this purpose. Visualization acts as the conduit, bridging the gap between data and public perception.
+Every year, approximately between 1,000 and 30,000 species face extinction [[1]](#1), raising a critical question: *Will humans become the only inhabitants of Earth after several centuries?* This pressing concern underscores the urgency for immediate conservation actions. The foundation of effective animal protection lies in enhancing public awareness and consensus, with data serving as a tool for this purpose. Visualization acts as the conduit, bridging the gap between data and public perception.
 
 **Overview, Motivation, and Target Audience**
 
@@ -53,14 +55,15 @@ Our project aims to create a dynamic and informative webpage targeted primarily 
 
 **Visualization Content and Features**
 
+For the visual part of our project, we intend to incorporate several features designed to raise awareness about endangered animals:
+
 1. **3D navigable globe:** A visualization showcasing the global distribution of conservation-challenged animals, offering users a comprehensive understanding of their spread and hotspots.
-2. **Species Profiles:** Detailed profiles for each species, including information on appearance, population, habitats, threats and conservation measures.
+2. **Species Profiles:** Detailed profiles for each species, including information on appearance, population, habitats, threats, and conservation measures.
 3. **Educational Content:** Curated educational videos that highlight the importance of conservation efforts and inspire viewers to contribute to these causes.
-4. **Interactive Features:** We plan to integrate the following interactive element to further engage users:
+4. **Interactive Feature:** We plan to integrate the following interactive element to further engage users:
 
   - **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
 
-<a id="1">[1]</a> Sisk, T. D., Launer, A. E., Switky, K. R., & Ehrlich, P. R. (1994). Identifying extinction threats. BioScience, 44(9), 592-604.
 
 ### Exploratory Data Analysis
 
@@ -69,9 +72,18 @@ Our project aims to create a dynamic and informative webpage targeted primarily 
 > - Show some basic statistics and get insights about the data
 
 
-Besides dataset pre-processing and cleaning mentioned in the Database section, we conducted exploratory data analysis. The details of pre-processing, cleaning, and EDA can be seen in [EDA.ipynb](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/EDA.ipynb). We present basic statistics as follows:
+Besides dataset pre-processing and cleaning mentioned in the **Dataset** section, we conducted exploratory data analysis. The details of pre-processing, cleaning, and EDA can be seen in [EDA.ipynb](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/EDA.ipynb). We present basic statistics as follows:
 
-1. The number of animals in each conservation status: 
+1. The number of animals in each conservation status, where these categories represent:
+   
+- NT: Near Threatened
+- VU: Vulnerable
+- EN: Endangered
+- CR: Critically Endangered
+- EW: Extinct in the Wild
+- EX: Extinct
+
+This table helps us understand how urgently we need to work to conserve different species.
 
 |      | category | counts |
 | ---- | -------- | ------ |
@@ -108,11 +120,11 @@ Besides dataset pre-processing and cleaning mentioned in the Database section, w
 
 3. Top ten countries with the most endangered animals:![top](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/top.png)
 
-4. Progress of an animal's status over time; we chose Herichthys labridens (in Mexico) as an example:
+4. Progress of an animal's status over time: Using Herichthys labridens in Mexico as an example, we track the progress of an animal's conservation status over time.
 
 ![an animal](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/an%20animal.png)
 
-5. Main threats to animals:
+5. Main threats to animals: This table outlines the top 20 threats that endangered animals face, highlighting problems that must be addressed to ensure their survival.
 
 |      | threat                                            | counts |
 | ---- | ------------------------------------------------- | ------ |
@@ -155,6 +167,10 @@ Our approach changes the way conservation-challenged animal data is presented by
 After extensive brainstorming and reviewing some relevant websites,  we've identified several sources (shown below) from which we're considering drawing  inspiration. With preliminary approval from our professors, we MAY adapt some of their innovative ideas to our project.
 
 [Species in Pieces](http://species-in-pieces.com/#), [react-globe.gl](https://vasturiano.github.io/react-globe.gl/), [Animalia](https://animalia.bio/)
+
+### References
+
+<a id="1">[1]</a> Sisk, T. D., Launer, A. E., Switky, K. R., & Ehrlich, P. R. (1994). Identifying extinction threats. BioScience, 44(9), 592-604.
 
 ## Milestone 2 (26th April, 5pm)
 
