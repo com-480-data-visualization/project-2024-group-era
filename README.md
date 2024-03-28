@@ -25,9 +25,9 @@ Please, fill the following sections about your project.
 > Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
 
 
-Our dataset was obtained from the [IUCN Red List](https://www.iucnredlist.org/support/contact), focusing on animals classified under various conservation statuses: Extinct (EX), Critically Endangered (CR), Endangered (EN), Vulnerable (VU), and Near Threatened (NT). The original dataset, provided in CSV format, contained 25,183 entries, each detailing 20 attributes. To augment our data, we developed a script to scrap additional information through the IUCN Red List API, aiming for a detailed representation of endangered species. The resulting dataset was organized into a directory with 1,799 subfolders, each representing an individual animal and containing six JSON files with additional attributes.
+Our dataset was obtained from the [IUCN Red List](https://www.iucnredlist.org/support/contact), focusing on animals classified under various conservation statuses: Extinct (EX), Critically Endangered (CR), Endangered (EN), Vulnerable (VU), and Near Threatened (NT). The original dataset, provided in CSV format, contained 25,183 entries, each detailing 20 attributes. To augment our data, we developed a script to scrap additional information through the IUCN Red List API, aiming for a detailed representation of conservation-challenged animals. The resulting dataset was organized into a directory with 1,799 subfolders, each representing an individual animal and containing six JSON files with additional attributes.
 
-Initially, we identified that every animal has a unique ID. However, the initial CSV dataset faced two significant challenges: (1) the duplication of some animal entries and (2) the presence of numerous empty fields, a consequence of the limited information available on these conservation-threatened species. To transform our dataset into a valuable resource for visualization, we preprocessed and cleaned it. First, we merged the CSV and scraped data, then carefully eliminated duplicate animal entries and attributes with null values to ensure data integrity.
+Initially, we identified that every animal has a unique ID. However, the initial CSV dataset faced two significant challenges: (1) the duplication of some animal entries and (2) the presence of numerous empty fields, a consequence of the limited information available on these conservation-challenged animals To transform our dataset into a valuable resource for visualization, we preprocessed and cleaned it. First, we merged the CSV and scraped data, then carefully eliminated duplicate animal entries and attributes with null values to ensure data integrity.
 
 Through this process, we transformed our dataset into JSON format, incorporating 1,799 animals with 39 attributes. Below is an example illustrating how our dataset is formatted:
 
@@ -58,11 +58,11 @@ Our project aims to create a dynamic and informative webpage targeted primarily 
 For the visual part of our project, we intend to incorporate several features designed to raise awareness about endangered animals:
 
 1. **3D navigable globe:** A visualization showcasing the global distribution of conservation-challenged animals, offering users a comprehensive understanding of their spread and hotspots.
-2. **Species Profiles:** Detailed profiles for each species, including information on appearance, population, habitats, threats, and conservation measures.
+2. **Species Profiles:** Detailed profiles for each animals, including information on appearance, population, habitats, threats, and conservation measures.
 3. **Educational Content:** Curated educational videos that highlight the importance of conservation efforts and inspire viewers to contribute to these causes.
 4. **Interactive Feature:** We plan to integrate the following interactive element to further engage users:
+     - **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
 
-  - **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
 
 
 ### Exploratory Data Analysis
