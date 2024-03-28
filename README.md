@@ -19,13 +19,15 @@ Please, fill the following sections about your project.
 
 ### Dataset
 
-> We sourced our dataset from the [IUCN Red List](https://www.iucnredlist.org/support/contact), focusing on animals classified under various conservation statuses: Extinct (EX), Extinct in the Wild (EW), Critically Endangered (CR), Endangered (EN), Vulnerable (VU), and Near Threatened (NT). The initial dataset, provided in CSV format, contained 25,183 entries, each detailing 20 attributes. To augment our data, we developed a script to scrap additional information through the IUCN Red List API, aiming for a comprehensive portrayal of conservation-challenged animals. The scrapped data dataset was a structured directory with 1,799 subfolders, each representing an individual animal and containing 6 JSON files with additional attributes.
+> We sourced our dataset from the [IUCN Red List](https://www.iucnredlist.org/support/contact), focusing on animals classified under various conservation statuses: Extinct (EX), Critically Endangered (CR), Endangered (EN), Vulnerable (VU), and Near Threatened (NT). The initial dataset, provided in CSV format, contained 25,183 entries, each detailing 20 attributes. To augment our data, we developed a script to scrap additional information through the IUCN Red List API, aiming for a comprehensive portrayal of conservation-challenged animals. The scrapped data dataset was a structured directory with 1,799 subfolders, each representing an individual animal and containing 6 JSON files with additional attributes.
 >
 > We identified that each animal is marked by a unique ID. However, the initial CSV dataset faced two significant challenges: (1) the duplication of some animal entries and (2) the presence of numerous empty fields, a consequence of the limited information available on these conservation-threatened species. These gaps detracted from the dataset's utility for visualization, necessitating a phase of data preprocessing and cleaning. We merged the CSV and scraped data, then carefully eliminated duplicate animal entries and attributes with null values to ensure data integrity.
 >
-> Through this rigorous process, we refined our dataset, in JSON format, to include 1,799 animals, now enriched with 64 attributes. Below is an example illustrating how our dataset is formatted:
+> Through this rigorous process, we refined our dataset, in JSON format, to include 1,799 animals, now enriched with 39 attributes. Below is an example illustrating how our dataset is formatted:
 >
-> ![image-20240328002051292](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/image-20240328002051292.png)
+> ![image-20240328003235760](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/image-20240328003235760.png)
+>
+> The full dataset is at [./data_viz_animals/animals.json](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/data_viz_animals/animals.json).
 
 ### Problematic
 
@@ -55,8 +57,73 @@ Please, fill the following sections about your project.
 
 ### Exploratory Data Analysis
 
-> Pre-processing of the data set you chose
-> - Show some basic statistics and get insights about the data
+> Besides dataset pre-processing and cleaning mentioned in Database section, we conducted exploratory data analysis. The details of pre-processing, cleaning, and EDA can be seen in [EDA.ipynb](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/EDA.ipynb). We present basic statistics as follows:
+>
+> 1. The number of animals in each conservation status: 
+>
+> |      | category | counts |
+> | ---- | -------- | ------ |
+> | 0    | EN       | 579    |
+> | 1    | VU       | 502    |
+> | 2    | NT       | 410    |
+> | 3    | CR       | 298    |
+> | 4    | EX       | 9      |
+>
+> 2. The number of animals per habitat; an animal can have more than one habitat:
+>
+>    |      | habitat                                           | counts |
+>    | ---- | ------------------------------------------------- | ------ |
+>    | 0    | Wetlands (inland) - Permanent Rivers/Streams/C... | 1033   |
+>    | 1    | Forest - Subtropical/Tropical Moist Lowland       | 389    |
+>    | 2    | Wetlands (inland) - Permanent Freshwater Lakes... | 254    |
+>    | 3    | Forest - Subtropical/Tropical Moist Montane       | 193    |
+>    | 4    | Marine Deep Benthic - Deep Sea Vents (Rifts/Se... | 159    |
+>    | 5    | Wetlands (inland) - Permanent Freshwater Marsh... | 131    |
+>    | 6    | Wetlands (inland) - Bogs, Marshes, Swamps, Fen... | 109    |
+>    | 7    | Wetlands (inland) - Freshwater Springs and Oases  | 100    |
+>    | 8    | Forest - Subtropical/Tropical Swamp               | 91     |
+>    | 9    | Wetlands (inland) - Seasonal/Intermittent/Irre... | 86     |
+>    | 10   | Wetlands (inland) - Seasonal/Intermittent Fres... | 68     |
+>    | 11   | Forest - Temperate                                | 59     |
+>    | 12   | Rocky areas (eg. inland cliffs, mountain peaks)   | 40     |
+>    | 13   | Forest - Subtropical/Tropical Dry                 | 32     |
+>    | 14   | Grassland - Subtropical/Tropical High Altitude    | 31     |
+>    | 15   | Savanna - Dry                                     | 27     |
+>    | 16   | Wetlands (inland) - Seasonal/Intermittent Fres... | 27     |
+>    | 17   | Grassland - Temperate                             | 26     |
+>    | 18   | Shrubland - Temperate                             | 23     |
+>    | 19   | Shrubland - Mediterranean-type Shrubby Vegetation | 21     |
+>
+> 3. Top ten countries with the most endangered animals:![top](C:\Users\Jianan Xu\OneDrive\Desktop\top.png)
+>
+> 4. Progress of an animal's status over time; we chose Herichthys labridens (in Mexico) as an example:
+>
+>    ![an animal](C:\Users\Jianan Xu\OneDrive\Desktop\an animal.png)
+>
+> 5. Main threats to animals:
+>
+>    |      | threat                                            | counts |
+>    | ---- | ------------------------------------------------- | ------ |
+>    | 0    | Annual & perennial non-timber crops               | 819    |
+>    | 1    | Agricultural & forestry effluents                 | 659    |
+>    | 2    | Dams & water management/use                       | 634    |
+>    | 3    | Mining & quarrying                                | 562    |
+>    | 4    | Logging & wood harvesting                         | 535    |
+>    | 5    | Scale Unknown/Unrecorded                          | 427    |
+>    | 6    | Agro-industry farming                             | 409    |
+>    | 7    | Domestic & urban waste water                      | 391    |
+>    | 8    | Livestock farming & ranching                      | 371    |
+>    | 9    | Type Unknown/Unrecorded                           | 333    |
+>    | 10   | Housing & urban areas                             | 321    |
+>    | 11   | Small-holder farming                              | 310    |
+>    | 12   | Soil erosion, sedimentation                       | 296    |
+>    | 13   | Herbicides and pesticides                         | 270    |
+>    | 14   | Unintentional effects: (subsistence/small scal... | 261    |
+>    | 15   | Industrial & military effluents                   | 256    |
+>    | 16   | Sewage                                            | 244    |
+>    | 17   | Fishing & harvesting aquatic resources            | 227    |
+>    | 18   | Nutrient loads                                    | 227    |
+>    | 19   | Unintentional effects: (large scale) [harvest]    | 224    |
 
 ### Related work
 
