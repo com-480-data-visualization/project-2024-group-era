@@ -58,7 +58,7 @@ Our project aims to create a dynamic and informative webpage targeted primarily 
 For the visual part of our project, we intend to incorporate several features designed to raise awareness about endangered animals:
 
 1. **3D navigable globe:** A visualization showcasing the global distribution of conservation-challenged animals, offering users a comprehensive understanding of their spread and hotspots.
-2. **Species Profiles:** Detailed profiles for each animal, including information on appearance, population, habitats, threats, and conservation measures.
+2. **Species Profiles:** Detailed profiles for each species, including information on appearance, population, habitats, threats, and conservation measures.
 3. **Educational Content:** Curated educational videos that highlight the importance of conservation efforts and inspire viewers to contribute to these causes.
 4. **Interactive Feature:** We plan to integrate the following interactive element to further engage users:
      - **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
@@ -165,7 +165,7 @@ Our approach changes the way conservation-challenged animal data is presented by
 
 **Source of Inspiration**
 
-After extensive brainstorming and reviewing some relevant websites,  we've identified several sources (shown below) from which we're considering drawing  inspiration. With preliminary approval from our professors, we MAY adapt some of their innovative ideas to our project.
+After extensive brainstorming and reviewing some relevant websites,  we've identified several sources (shown below) from which we're considering drawing  inspiration. With preliminary approval from the websits' owners and our professors, we MAY adapt some of their innovative ideas to our project.
 
 [Species in Pieces](http://species-in-pieces.com/#), [react-globe.gl](https://vasturiano.github.io/react-globe.gl/), [Animalia](https://animalia.bio/)
 
