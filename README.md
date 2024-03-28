@@ -74,7 +74,7 @@ For the visual part of our project, we intend to incorporate several features de
 
 Besides dataset pre-processing and cleaning mentioned in the **Dataset** section, we conducted exploratory data analysis. The details of pre-processing, cleaning, and EDA can be seen in [EDA.ipynb](https://github.com/JiananAlvin/com480_data_viz_group_era/blob/master/EDA.ipynb). We present basic statistics as follows:
 
-1. The number of animals in each conservation status, where categories represent:
+1. **The number of animals in each conservation status**, where categories represent:
    
 - NT: Near Threatened
 - VU: Vulnerable
@@ -83,7 +83,7 @@ Besides dataset pre-processing and cleaning mentioned in the **Dataset** section
 - EW: Extinct in the Wild
 - EX: Extinct
 
-This table helps us understand how urgently we need to work to conserve different species.
+This table helps us understand how urgently we need to work to conserve different species:
 
 |      | category | counts |
 | ---- | -------- | ------ |
@@ -93,7 +93,7 @@ This table helps us understand how urgently we need to work to conserve differen
 | 3    | CR       | 298    |
 | 4    | EX       | 9      |
 
-2. The number of animals per habitat; an animal can have more than one habitat:
+2. **The number of animals per habitat**, where an animal can have more than one habitat:
 
 |      | habitat                                           | counts |
 | ---- | ------------------------------------------------- | ------ |
@@ -118,13 +118,13 @@ This table helps us understand how urgently we need to work to conserve differen
 | 18   | Shrubland - Temperate                             | 23     |
 | 19   | Shrubland - Mediterranean-type Shrubby Vegetation | 21     |
 
-3. Top ten countries with the most endangered animals:![top](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/top.png)
+3. **Top ten countries with the most endangered animals:**![top](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/top.png)
 
-4. Progress of an animal's status over time: Using Herichthys labridens in Mexico as an example, we track the progress of an animal's conservation status over time.
+4. **Progress of an animal's status over time:** Using Herichthys labridens in Mexico as an example, we track the progress of an animal's conservation status over time.
 
 ![an animal](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/an%20animal.png)
 
-5. Main threats to animals: This table outlines the top 20 threats that endangered animals face, highlighting problems that must be addressed to ensure their survival.
+5. **Main threats to animals:** This table outlines the top 20 threats that endangered animals face, highlighting problems that must be addressed to ensure their survival.
 
 |      | threat                                            | counts |
 | ---- | ------------------------------------------------- | ------ |
@@ -148,6 +148,7 @@ This table helps us understand how urgently we need to work to conserve differen
 | 17   | Fishing & harvesting aquatic resources            | 227    |
 | 18   | Nutrient loads                                    | 227    |
 | 19   | Unintentional effects: (large scale) [harvest]    | 224    |
+
 
 ### Related work
 
