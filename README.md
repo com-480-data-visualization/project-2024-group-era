@@ -58,7 +58,7 @@ Our project aims to create a dynamic and informative webpage targeted primarily 
 3. **Educational Content:** Curated educational videos that highlight the importance of conservation efforts and inspire viewers to contribute to these causes.
 4. **Interactive Features:** We plan to integrate the following interactive element to further engage users:
 
-- **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
+  - **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
 
 <a id="1">[1]</a> Sisk, T. D., Launer, A. E., Switky, K. R., & Ehrlich, P. R. (1994). Identifying extinction threats. BioScience, 44(9), 592-604.
 
