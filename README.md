@@ -29,7 +29,7 @@ Our dataset was obtained from the [IUCN Red List](https://www.iucnredlist.org/su
 
 Initially, we identified that every animal has a unique ID. However, the initial CSV dataset faced two significant challenges: (1) the duplication of some animal entries and (2) the presence of numerous empty fields, a consequence of the limited information available on these conservation-threatened species. To transform our dataset into a valuable resource for visualization, we preprocessed and cleaned it. First, we merged the CSV and scraped data, then carefully eliminated duplicate animal entries and attributes with null values to ensure data integrity.
 
-Through this rigorous process, we transformed our dataset into JSON format, incorporating 1,799 animals, now enriched with 39 attributes. Below is an example illustrating how our dataset is formatted:
+Through this process, we transformed our dataset into JSON format, incorporating 1,799 animals, now with 39 attributes. Below is an example illustrating how our dataset is formatted:
 
 ![image-20240328003235760](https://raw.githubusercontent.com/JiananAlvin/image_bed/master/image-20240328003235760.png)
 
@@ -45,22 +45,20 @@ The full dataset is at [./data_viz_animals/animals.json](https://github.com/Jian
 
 **General Topic and Main Axis Development**
 
-Every year, approximately 1,000 species face extinction, raising a critical question: Will humans become the only inhabitants of Earth after several centuries? This pressing concern underscores the urgency for immediate conservation actions. The foundation of effective animal protection lies in enhancing public awareness and consensus, with data serving as a pivotal tool for this purpose. Visualization acts as the conduit, bridging the gap between data and public perception.
+Every year, approximately 1,000 species face extinction, raising a critical question: Will humans become the only inhabitants of Earth after several centuries? This pressing concern underscores the urgency for immediate conservation actions. The foundation of effective animal protection lies in enhancing public awareness and consensus, with data serving as a tool for this purpose. Visualization acts as the conduit, bridging the gap between data and public perception.
 
 **Overview, Motivation, and Target Audience**
 
-Our project aims to create a dynamic and informative webpage targeted primarily at students, fostering increased awareness about conservation-challenged animals. This initiative is driven by the belief that education and engagement can catalyze collective action towards animal conservation.
+Our project aims to create a dynamic and informative webpage targeted primarily at students, fostering increased awareness about conservation-challenged animals. This initiative is driven by the belief that education and engagement can spark collective action towards animal conservation.
 
 **Visualization Content and Features**
 
 1. **3D navigable globe:** A visualization showcasing the global distribution of conservation-challenged animals, offering users a comprehensive understanding of their spread and hotspots.
 2. **Species Profiles:** Detailed profiles for each species, including visuals and information on appearance, diet, habits, behaviors, and conservation measures.
 3. **Educational Content:** Curated educational videos that highlight the importance of conservation efforts and inspire viewers to contribute to these causes.
-4. **Interactive Features:** We plan to integrate innovative interactive elements to further engage users:
+4. **Interactive Features:** We plan to integrate the following interactive element to further engage users:
 
-- **EcoSurvival Game:** A captivating game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
-
-*Note: Due to time constraints, we will implement either the game or the forecasting. If time permits, we aspire to include both to maximize user engagement and educational value.*
+- **EcoSurvival Game:** A game where participants match conservation-challenged animals with their ideal ecological requirements, encompassing food, habitats, and more. High scorers will be awarded a certificate of achievement, fostering learning through engaging gameplay.
 
 ### Exploratory Data Analysis
 
@@ -148,7 +146,7 @@ Besides dataset pre-processing and cleaning mentioned in the Database section, w
 
 **Originality**
 
-Our approach revolutionizes the way conservation-challenged animal data is presented by shifting from the traditional, static encyclopedic format to an engaging, dynamic user experience. We introduce a 3D navigable globe that embeds animal profiles, allowing users to explore species by region with simple gestures. This immersive interface is a departure from the norm,  inviting users to engage deeply with the content. Additionally, we innovate by integrating gamification or/and machine learning predictions through features like the EcoSurvival game or/and ML EcoForecast. These elements are designed not just for engagement but to spur users into conservation actions, a significant leap beyond the informational offerings of most sites. In conclusion, Our originality lies in these interactive and educational enhancements, drawing on diverse inspirations to make environmental awareness both informative and enjoyable.
+Our approach changes the way conservation-challenged animal data is presented by shifting from the traditional, static encyclopedic format to an engaging, dynamic user experience. We introduce a 3D navigable globe that embeds animal profiles, allowing users to explore species by region, inviting users to engage deeply with the content. Additionally, we innovate by integrating gamification through features like the EcoSurvival game. These elements are designed not just for engagement but to spur users into conservation actions, a significant leap beyond the informational offerings of most sites. Our originality lies in these interactive and educational enhancements, drawing on diverse inspirations to make environmental awareness both informative and enjoyable.
 
 **Source of Inspiration**
 
