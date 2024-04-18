@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20">
+    <div className="min-h-screen flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
         Empowering people to
         <span className="bg-gradient-to-r from-[#116211] to-[#61eb54] text-transparent bg-clip-text">

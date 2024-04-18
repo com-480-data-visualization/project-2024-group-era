@@ -1,5 +1,5 @@
 import logo from '../assets/conservation.png'
-import { navItems } from '../constants/index'
+import { navItems, title } from '../constants/index'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="px-10 flex items-center justify-between lg:text-sm">
             <div className='flex justify-center items items-center'>
                 <img src={logo} alt="logo" className="w-8 h-8 mr-3" />
-                <span className="text-lg tracking-tight">Wild guard</span>
+                <span className="text-lg tracking-tight">{title}</span>
             </div>
             <div>
                 <ul className='hidden lg:flex space-x-12'>
