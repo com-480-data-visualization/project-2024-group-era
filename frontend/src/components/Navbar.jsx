@@ -1,4 +1,4 @@
-import logo from '../assets/react.svg'
+import logo from '../assets/conservation.png'
 import { navItems } from '../constants/index'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
@@ -11,8 +11,8 @@ const Navbar = () => {
     }
 
     return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-        <div className="container px-5 flex items-center justify-between lg:text-sm">
+    <nav className="sticky top-0 z-50 py-4 backdrop-blur-lg border-b border-neutral-700/80">
+        <div className="px-10 flex items-center justify-between lg:text-sm">
             <div className='flex justify-center items items-center'>
                 <img src={logo} alt="logo" className="w-8 h-8 mr-3" />
                 <span className="text-lg tracking-tight">Wild guard</span>
