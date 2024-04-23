@@ -6,3 +6,5 @@ export const CONSERVATION_STATUSES = {
     "EW": 4,
     "EX": 5
   };
+
+  export const THEME_GREEN = "#92d943";
