@@ -3,6 +3,8 @@ import animalsData from '../../../../data_viz_animals/animals.json';
 import { CONSERVATION_STATUSES } from '../../constants/conservationStatuses.jsx';  
 import TwoDWorldMap from './TwoDWorldMap';
 import ThreeDGlobe from './ThreeDGlobe';
+import "../toggle/Toggle.css";
+
 
 // Adjust the color based on conservation status. The higher the conservation status, the darker the red should be.
 const colorScale = d => `rgba(255, ${100 + 155 * (1 - d / 5)}, ${100 + 155 * (1 - d / 5)}, 1)`;
@@ -32,11 +34,13 @@ const GlobeSection = () => {
   return (
     <div className="min-h-screen">
       <div className="flex flex-col items-center mt-6 lg:mt-20">
-        <p className="mt-10 text-lg text-center max-w-4xl">
-          <button onClick={handleToggle} style={{ marginRight: '10px', color: 'green' }} className="text-lg">
-            {isToggled ? '2D' : '3D'}
-          </button> 
-          Navigation: Explore the world and discover the distribution of endangered species.
+        <p className="flex items-center justify-center mt-10 max-w-4xl">
+          <div className='toggle-container' onClick={handleToggle} >
+            <div className={`toggle-btn ${!isToggled ? "disable" : ""}`}>
+              {isToggled ? '2D' : '3D'}
+            </div>
+          </div> 
+          <span className="text-lg text-center ml-2"> Navigation: Explore the world and discover the distribution of endangered species.</span>
         </p>
         {isToggled ? <TwoDWorldMap points={points} /> : <ThreeDGlobe points={points} />}
       </div>
