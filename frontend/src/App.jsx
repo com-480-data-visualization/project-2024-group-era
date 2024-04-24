@@ -5,7 +5,7 @@ import GlobeSection from './components/globe/GlobeSection'
 import HabitatsSection from './components/HabitatsSection'
 import AnimalSection from './components/AnimalSection'
 import Threats from './components/Threats'
-import MeasuresSection from './components/MeasuresSection'
+import MeasuresSection from './components/measures/MeasuresSection'
 import Footer from './components/Footer'
 
 const App = () => {

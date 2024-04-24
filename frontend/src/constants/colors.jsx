@@ -1,0 +1,1 @@
+export const THEME_GREEN = "#92d943";
