@@ -3,8 +3,8 @@ import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import GlobeSection from './components/globe/GlobeSection'
 import HabitatsSection from './components/HabitatsSection'
-import AnimalSection from './components/AnimalSection'
-import Threats from './components/Threats'
+import ConservationSection from './components/ConservationSection'
+import ThreatsSection from './components/ThreatsSection'
 import MeasuresSection from './components/MeasuresSection'
 import Footer from './components/Footer'
 
@@ -16,8 +16,8 @@ const App = () => {
         <HeroSection />
         <GlobeSection />
         <HabitatsSection />
-        <AnimalSection />
-        <Threats />
+        <ConservationSection />
+        <ThreatsSection />
         <MeasuresSection />
       </div>
       <Footer />
