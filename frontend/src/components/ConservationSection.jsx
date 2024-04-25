@@ -11,31 +11,37 @@ const ConservationSection = () => {
   ];
 
   return (
-    <div id="conservation" className="min-h-screen">
-      <div className="flex flex-col items-center mt-6 lg:mt-20">
-        <p className="mt-10 text-lg text-center max-w-4xl">
-          Conservation Status.
-        </p>
-        <div style={{ marginTop: '150px', width: '1024px', height: '400px' }}>
-          <ResponsiveContainer width={1024} height={400} >
-            <BarChart width={700} height={500} data={data}>
-              <CartesianGrid stroke="#333" strokeDasharray="5 5" />
-              <XAxis dataKey="category" stroke="#fff" tick={{ fontSize: 12 }}>
-                <Label value="Conservation Status" offset={-10} position="insideBottom" fill="#fff" />
-              </XAxis>
-              <YAxis stroke="#fff" tick={{ fontSize: 12 }}>
-                <Label value="Number of Species" angle={-90} offset={10} position="insideLeft" fill="#fff" />
-              </YAxis>
-              <Tooltip wrapperStyle={{ backgroundColor: '#333', color: '#fff' }} />
-              <Bar dataKey="counts" fill="#8884d8" label={{ position: 'top' }}>
-                {data.map((entry, index) => (
-                  <Cell key={index} fill={entry.color} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+    <div id="conservation">
+      <div className="flex flex-col items-center py-20 rounded-3xl bg-neutral-800">
+        <h1 className="text-4xl font-bold">Do you know the conservation status of species?</h1>
+        <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-20">
+          <div className="w-full lg:w-1/2">
+            <p className="mx-20">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+          </div>
+          <div className="w-full lg:w-1/2 px-10">
+              <ResponsiveContainer height={400}>
+                <BarChart data={data}>
+                  <CartesianGrid stroke="#333" strokeDasharray="5 5" />
+                  <XAxis dataKey="category" stroke="#fff" tick={{ fontSize: 12 }}>
+                    <Label value="Conservation Status" offset={-5} position="insideBottom" fill="#fff" />
+                  </XAxis>
+                  <YAxis stroke="#fff" tick={{ fontSize: 12 }}>
+                    <Label value="Number of Species" angle={-90} offset={10} position="insideLeft" fill="#fff" />
+                  </YAxis>
+                  <Tooltip wrapperStyle={{ backgroundColor: '#333', color: '#fff' }} />
+                  <Bar dataKey="counts" fill="#8884d8" label={{ position: 'top' }}>
+                    {data.map((entry, index) => (
+                      <Cell key={index} fill={entry.color} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            
+          </div>
         </div>
-      </div>
+        </div>
     </div>
   );
 }
