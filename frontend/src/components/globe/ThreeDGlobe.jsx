@@ -10,13 +10,13 @@ const GlobeComponent = ({ points }) => {
       width={850}
       height={850}
       pointsData={points}
-      pointAltitude={0.005}
+      pointAltitude={0.01}
       pointColor="color"
-      pointRadius={0.6}
+      pointRadius={0.5}
       pointLabel={point => `
-        <div style="padding: 5px; font-size: 12px;">
-          <div style="font-weight: bold;">${point.name}</div>
-          <div style="color: grey; font-size: 10px;">${point.conservationStatus}</div>
+        <div style="padding: 5px; font-size: 12px; background: white;">
+          <div style="font-weight: bold; color: black;">${point.name}</div>
+          <div style="color: grey; font-size: 10px;">Conservation status: ${point.conservationStatus}</div>
         </div>
       `}
     />

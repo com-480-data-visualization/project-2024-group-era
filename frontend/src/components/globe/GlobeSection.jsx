@@ -32,8 +32,9 @@ const GlobeSection = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <div className="flex flex-col items-center mt-6 lg:mt-20">
+    <div id="endangered-species" className='pt-24'>
+      <h2 className="text-3xl font-semibold text-center mt-10">Endangered Species</h2>
+      <div className="flex flex-col items-center">
         <p className="flex items-center justify-center mt-10 max-w-4xl">
           <div className='toggle-container' onClick={handleToggle} >
             <div className={`toggle-btn ${!isToggled ? "disable" : ""}`}>

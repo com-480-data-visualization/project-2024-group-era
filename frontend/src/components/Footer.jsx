@@ -3,9 +3,11 @@ import { title } from '../constants/index'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1a1d1b] text-white p-4">
-      <div className="flex justify-center">
-        <p className="text-center">{title}</p>
+    <footer className="bg-neutral-900 text-neutral-300 py-10">
+      <div className="container mx-auto text-center">
+        <p className="text-sm">
+          &copy; {title} {new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   )
