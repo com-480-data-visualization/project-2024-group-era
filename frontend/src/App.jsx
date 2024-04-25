@@ -6,19 +6,21 @@ import HabitatsSection from './components/HabitatsSection'
 import ConservationSection from './components/ConservationSection'
 import ThreatsSection from './components/ThreatsSection'
 import MeasuresSection from './components/measures/MeasuresSection'
+import About from './components/About'
 import Footer from './components/Footer'
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <div className='mx-auto py-20 px-8 max-w-full'>
+      <div className='py-20 px-8'>
         <HeroSection />
+        <ConservationSection />
         <GlobeSection />
         <HabitatsSection />
-        <ConservationSection />
         <ThreatsSection />
         <MeasuresSection />
+        <About />
       </div>
       <Footer />
     </>

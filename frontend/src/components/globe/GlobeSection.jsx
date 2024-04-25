@@ -32,7 +32,7 @@ const GlobeSection = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div id="endangered-species" className="min-h-screen">
       <div className="flex flex-col items-center mt-6 lg:mt-20">
         <p className="flex items-center justify-center mt-10 max-w-4xl">
           <div className='toggle-container' onClick={handleToggle} >

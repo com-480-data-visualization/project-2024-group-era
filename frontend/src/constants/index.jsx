@@ -1,8 +1,11 @@
 export const navItems = [
-  { label: "Home", href: "#" },
-  { label: "Animals", href: "#" },
-  { label: "Habitats", href: "#" },
-  { label: "Threats", href: "#" },
+  { label: "Home", href: "home" },
+  { label: "Conservation Status", href: "conservation" },
+  { label: "Endangered Species", href: "endangered-species" },
+  { label: "Habitats", href: "habitats" },
+  { label: "Threats", href: "threats" },
+  { label: "Actions", href: "actions"},
+  { label: "About", href: "about" },
 ];
 
 export const title = "Wild Guard";
