@@ -11,7 +11,7 @@ const ConservationSection = () => {
   ];
 
   return (
-    <div id="conservation">
+    <div id="conservation" className="mx-14">
       <div className="flex flex-col items-center py-20 rounded-3xl bg-neutral-800">
         <h1 className="text-4xl font-bold">Do you know the conservation status of species?</h1>
         <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-20">

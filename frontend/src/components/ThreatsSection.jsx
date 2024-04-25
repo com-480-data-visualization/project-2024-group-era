@@ -11,13 +11,15 @@ const ThreatsSection = () => {
   ];
 
   return (
-    <div id="threats" className="pt-28">
-      <h2 className="text-3xl font-semibold text-center mt-10">Threats to Endangered Species</h2>
-      <div className="flex flex-col items-center">
-        <p className="my-10 text-lg text-center max-w-4xl">
-          Learn about the top five threats to endangered species and their counts. The data is based on the IUCN Red List of Threatened Species.
-        </p>
-        <div>
+    <div id="threats" className="min-h-screen">
+      <div className="flex flex-col items-center mt-6 lg:mt-20">
+        <h2 className="text-3xl font-semibold text-center mt-10">Threats to Endangered Species</h2>
+        <div className="flex flex-col items-center">
+          <p className="my-10 text-lg text-center max-w-4xl">
+            Learn about the top five threats to endangered species and their counts. The data is based on the IUCN Red List of Threatened Species.
+          </p>
+        </div>
+        <div style={{ width: '80%', height: '500px' }}>
           <ResponsiveContainer width="100%" height={500}>
             <BarChart layout="vertical" data={data} margin={{ top: 20, right: 20, bottom: 20, left: 80 }}>
               <CartesianGrid stroke="#333" strokeDasharray="5 5" />
