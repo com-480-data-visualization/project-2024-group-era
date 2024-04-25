@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { Tree } from "./MeasuresData";
+import { Tree } from "./ActionsData";
 import React from "react";
 
 type CircularPackingProps = {
@@ -79,7 +79,7 @@ export const CircularPacking = ({
                     </g>
                 ))}
             </g>
-            <g transform={`translate(${width + 20}, ${height / 4})`}>
+            <g transform={`translate(${width - 50}, ${height / 4})`}>
                 {legends}
             </g>
         </svg>
