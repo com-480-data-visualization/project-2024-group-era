@@ -38,10 +38,9 @@ const ConservationSection = () => {
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
-            
           </div>
         </div>
-        </div>
+      </div>
     </div>
   );
 }

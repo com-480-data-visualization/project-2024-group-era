@@ -3,20 +3,21 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Cell, Label, Respo
 
 const ThreatsSection = () => {
   const data = [
-    { threat: 'Non-timber crops', counts: 819, color: '#ccd5ae' },
-    { threat: 'Agricultural effluents', counts: 659, color: '#e9edc9' },
-    { threat: 'Dams & water management', counts: 634, color: '#fefae0' },
-    { threat: 'Mining & quarrying', counts: 562, color: '#faedcd' },
-    { threat: 'Logging & wood harvesting', counts: 535, color: '#d4a373' }
+    { threat: 'Non-timber crops', counts: 819, color: '#f9f7d2' },
+    { threat: 'Agricultural effluents', counts: 659, color: '#f3f0b8' },
+    { threat: 'Dams & water management', counts: 634, color: '#e6e390' },
+    { threat: 'Mining & quarrying', counts: 562, color: '#d9d06a' },
+    { threat: 'Logging & wood harvesting', counts: 535, color: '#ccc944' }
   ];
 
   return (
-    <div id="threats" className="min-h-screen">
-      <div className="flex flex-col items-center mt-6 lg:mt-20">
-        <p className="mt-10 text-lg text-center max-w-4xl">
-          Threats: Learn about the dangers that threaten the survival of endangered species.
+    <div id="threats" className="pt-28">
+      <h2 className="text-3xl font-semibold text-center mt-10">Threats to Endangered Species</h2>
+      <div className="flex flex-col items-center">
+        <p className="my-10 text-lg text-center max-w-4xl">
+          Learn about the top five threats to endangered species and their counts. The data is based on the IUCN Red List of Threatened Species.
         </p>
-        <div style={{ marginTop: '150px', width: '65%', height: '500px' }}>
+        <div>
           <ResponsiveContainer width="100%" height={500}>
             <BarChart layout="vertical" data={data} margin={{ top: 20, right: 20, bottom: 20, left: 80 }}>
               <CartesianGrid stroke="#333" strokeDasharray="5 5" />
