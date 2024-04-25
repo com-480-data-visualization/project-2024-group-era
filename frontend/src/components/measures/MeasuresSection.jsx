@@ -97,10 +97,11 @@ const MeasuresSection = () => {
     }, []);
 
     return (
-        <div id="actions" className="min-h-screen">
-            <div className="flex flex-col items-center mt-6 lg:mt-20">
+        <div id="actions" className="min-h-screen pt-24">
+            <h2 className="text-3xl font-semibold text-center mt-10">Conservation Actions</h2>
+            <div className="flex flex-col items-center ]lg:mt-20">
                 <p className="mt-10 text-lg text-center max-w-4xl">
-                    Conservation Measures: Discover the conservation measures taken to protect endangered species.
+                    Discover the conservation measures taken to protect endangered species.
                 </p>
                 <svg ref={chartRef} width={800} height={600}></svg>
             </div>
