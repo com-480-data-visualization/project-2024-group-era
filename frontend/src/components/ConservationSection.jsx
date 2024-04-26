@@ -17,7 +17,7 @@ const ConservationSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-20">
           <div className="w-full lg:w-1/2">
             <p className="mx-20">
-              In this section, we use a bar chart to represents how many animals belong to each conservation category, highlighting the number of species that are close to facing extinction. The more intense the red color, the higher the likelihood of extinction for those species. The chart in this section aims to reflect the importance of addressing immediate conservation actions.
+              In this section, we use a bar chart to represent how many animals belong to each conservation category, highlighting the number of species that are close to facing extinction. The more intense the red color, the higher the likelihood of extinction for those species. The chart in this section aims to reflect the importance of addressing immediate conservation actions.
             </p>
           </div>
           <div className="w-full lg:w-1/2 px-10">
