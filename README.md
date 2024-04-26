@@ -179,6 +179,8 @@ After extensive brainstorming and reviewing some relevant websites,  we've ident
 
 **10% of the final grade**
 
+You can find our website at the following link: [website](https://com-480-data-visualization.github.io/project-2024-group-era/)
+
 
 ## Milestone 3 (31st May, 5pm)
 
