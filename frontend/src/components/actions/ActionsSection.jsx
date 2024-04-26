@@ -11,7 +11,7 @@ const ActionsSection = () => {
                 <div className="flex flex-col lg:flex-row items-center justify-center w-full">
                     <div className="w-full lg:w-1/2 px-20">
                         <p className="text-lg text-white">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            This section presents packed circles categorizing the various conservation actions undertaken to protect endangered species. Each circle represents a different category of action, with its size reflecting the number of animals that benefit from that type of action. This visualization is challenging because the original actions data in our dataset are textual descriptions, not categories. To solve this problem, we first utilized a large language model to classify actions data and then created a Python script to count each category. To implement circle packing, we used D3.js. Currently, it is a static visualization, we will make it interactive, such as allowing visitors to zoom in and out, in the next milestone.
                         </p>
                     </div>
                     <div className="w-full lg:w-1/2 px-6 flex items-center justify-center">
