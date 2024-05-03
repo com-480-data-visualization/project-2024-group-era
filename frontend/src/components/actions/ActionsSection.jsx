@@ -6,11 +6,11 @@ const ActionsSection = () => {
     return (
         <div id="actions" className="mx-14">
           <div className="flex flex-col items-center py-20 rounded-3xl bg-neutral-800">
-            <h1 className="text-4xl font-bold">Discover the conservation actions taken to protect endangered species.</h1>
+            <h1 className="text-4xl font-bold">What actions should we take to protect endangered species?</h1>
             <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-20">
               <div className="w-full lg:w-1/2">
                 <p className="mx-20">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                This section presents packed circles categorizing the various conservation actions undertaken to protect endangered species. Each circle represents a different category of action, with its size reflecting the number of animals that benefit from that type of action. This visualization is challenging because the original actions data in our dataset are textual descriptions, not categories. To solve this problem, we first utilized a large language model to classify actions data and then created a Python script to count each category. To implement circle packing, we used D3.js. Currently, it is a static visualization, we will make it interactive, such as allowing visitors to zoom in and out, in the next milestone.
                 </p>
               </div>
               <div className="w-full lg:w-1/2 px-10">

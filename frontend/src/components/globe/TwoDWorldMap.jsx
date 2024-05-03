@@ -39,7 +39,7 @@ function MapComponent({ points }) {
     return () => map.remove();  // Clean up the map when the component is unmounted
   }, [points]);
 
-  return <div ref={mapRef} style={{ width: '1024px', height: '512px', marginTop: '169px' }} />;
+  return <div ref={mapRef} style={{ width: '1024px', height: '512px', marginTop: '10px' }} />;
 }
 
 export default MapComponent;

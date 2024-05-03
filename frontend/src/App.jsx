@@ -6,6 +6,7 @@ import HabitatsSection from './components/HabitatsSection'
 import ConservationSection from './components/ConservationSection'
 import ThreatsSection from './components/ThreatsSection'
 import ActionsSection from './components/actions/ActionsSection'
+import About from './components/About'
 import Footer from './components/Footer'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <HabitatsSection />
         <ThreatsSection />
         <ActionsSection />
+        <About />
       </div>
       <Footer />
     </>

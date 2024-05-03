@@ -13,6 +13,7 @@ const GlobeComponent = ({ points }) => {
       pointAltitude={0.01}
       pointColor="color"
       pointRadius={0.5}
+      sizeScale={1}
       pointLabel={point => `
         <div style="padding: 5px; font-size: 12px; background: white;">
           <div style="font-weight: bold; color: black;">${point.name}</div>
