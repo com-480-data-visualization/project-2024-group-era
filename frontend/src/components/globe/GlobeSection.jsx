@@ -51,7 +51,7 @@ return (
         </div>
       ) : (
         <div className="flex flex-row items-center justify-center w-full">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 px-10">
             <ThreeDGlobe points={points} />
           </div>
           <div className="w-full lg:w-1/2 px-10">

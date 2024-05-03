@@ -9,7 +9,7 @@ const CirclePacking = ({ width, data }) => {
 
     const height = width * 0.7;
 
-    const color = d3.scaleLinear()
+    const color = d3.scaleLinear<string, number>()
       .domain([0, 5])
       .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
       .interpolate(d3.interpolateHcl);
@@ -38,7 +38,7 @@ const CirclePacking = ({ width, data }) => {
       .on("click", (event, d) => focus !== d && (zoom(event, d), event.stopPropagation()));
 
     const label = svg.append("g")
-      .style("font", "15px sans-serif")
+      .style("font", "13px sans-serif")  // font size of the text
       .attr("pointer-events", "none")
       .attr("text-anchor", "middle")
       .selectAll("text")

@@ -14,7 +14,7 @@ const ActionsSection = () => {
                 </p>
               </div>
               <div className="w-full lg:w-1/2 px-10">
-                <ResponsiveContainer height={680} width="100%">
+                <ResponsiveContainer height={400} width="100%">
                   <CirclePacking width={928} data={data} />
                 </ResponsiveContainer>
               </div>
