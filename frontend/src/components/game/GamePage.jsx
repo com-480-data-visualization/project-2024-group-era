@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Pie } from 'react-chartjs-2';
+import certificate from '../../assets/certificate.jpeg';
 
 const questions = [
   { question: "What is 2 + 2?", options: ["2", "3", "4", "5"], answer: 2 },
@@ -38,7 +39,7 @@ function GamePage() {
   };
 
   if (submitted && answers.every((answer, index) => answer === questions[index].answer)) {
-    return <img src="../../assets/certificate.jpeg" alt="Certificate of Completion" />;
+    return <img src={certificate} alt="Certificate of Completion" />;
   }
 
   return (

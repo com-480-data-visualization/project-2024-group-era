@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Globe from 'react-globe.gl';
 
-const GlobeComponent = ({ points }) => {
+const GlobeComponent = ({ points, width }) => {
   const globeEl = useRef(undefined);
 
   useEffect(() => {
@@ -16,8 +16,8 @@ const GlobeComponent = ({ points }) => {
       globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
       bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
       backgroundColor="rgba(0,0,0,0)"
-      width={600}
-      height={400}
+      width={width}
+      height={width}
       pointsData={points}
       pointAltitude={0.01}
       pointColor="color"

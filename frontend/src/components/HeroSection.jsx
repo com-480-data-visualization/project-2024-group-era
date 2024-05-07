@@ -1,5 +1,6 @@
 import { Search } from 'lucide-react'
 import React from 'react'
+import { BUTTON_PROPERTY } from '../constants/button'
 
 const HeroSection = () => {
   return (
@@ -31,11 +32,7 @@ const HeroSection = () => {
         />
         <a
           href="#"
-          className="
-          bg-gradient-to-r from-[#116211] to-[#61eb54] 
-          py-3 px-4 mx-3 rounded-md
-          hover:from-[#74ce6c] hover:to-[#36de27] ease-in-out duration-500
-          "
+          className={BUTTON_PROPERTY}
         >
           <Search size={22} />
         </a>

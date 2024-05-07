@@ -49,7 +49,7 @@ const ThreatsSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-20">
           <div className="w-full lg:w-1/2 px-10">
               <ResponsiveContainer height={500}>
-                <BarChart layout="vertical" data={data} margin={{ top: 20, right: 20, bottom: 20, left: 80 }}>
+                <BarChart layout="vertical" data={data} margin={{ top: 20, right: 0, bottom: 20, left: 0 }}>
                   <CartesianGrid stroke="#333" strokeDasharray="5 5" />
                   <XAxis type="number" stroke="#fff" tick={{ fontSize: 12 }}>
                     <Label value="Count" angle={0} offset={-20} position="insideBottom" fill="#fff" />
