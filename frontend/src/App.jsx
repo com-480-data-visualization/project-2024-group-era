@@ -1,30 +1,15 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import GlobeSection from './components/globe/GlobeSection'
-import HabitatsSection from './components/HabitatsSection'
-import ConservationSection from './components/ConservationSection'
-import ThreatsSection from './components/ThreatsSection'
-import ActionsSection from './components/actions/ActionsSection'
-import About from './components/About'
-import Footer from './components/Footer'
+import React from 'react';
+import Home from './Home';
+import GamePage from './components/game/GamePage';
+import { Route, Routes } from 'react-router-dom';
 
-const App = () => {
+function App() {
   return (
-    <>
-      <Navbar />
-      <div className='mx-auto py-20 px-8 max-w-full'>
-        <HeroSection />
-        <ConservationSection />
-        <GlobeSection />
-        <HabitatsSection />
-        <ThreatsSection />
-        <ActionsSection />
-        <About />
-      </div>
-      <Footer />
-    </>
-  )
-}
+    <Routes>
+      <Route path="/project-2024-group-era/" element={<Home />} />
+      <Route path="/project-2024-group-era/game" element={<GamePage />} />
+    </Routes>
+  );
+};
 
-export default App
+export default App;
