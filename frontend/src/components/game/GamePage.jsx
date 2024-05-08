@@ -1,16 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Pie } from 'react-chartjs-2';
 import certificate from '../../assets/certificate.jpeg';
+import './styles.css';
+import { BUTTON_PROPERTY } from '../../constants/button';
+// import fail from '../../assets/fail.jpeg'; 
 
 const questions = [
   { question: "What is 2 + 2?", options: ["2", "3", "4", "5"], answer: 2 },
   { question: "Capital of France?", options: ["Paris", "Rome", "Berlin", "Madrid"], answer: 0 },
-  // Add more questions as needed
 ];
 
 function GamePage() {
   const [answers, setAnswers] = useState(Array(questions.length).fill(null));
   const [submitted, setSubmitted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(30); // Timer set to 30 seconds
+
+  useEffect(() => {
+    if (timeLeft > 0) {
+      const timerId = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      return () => clearTimeout(timerId);
+    } else if (!submitted) {
+      handleSubmit();
+    }
+  }, [timeLeft]);
 
   const handleOptionChange = (index, optionIndex) => {
     const newAnswers = [...answers];
@@ -38,14 +50,28 @@ function GamePage() {
     ]
   };
 
-  if (submitted && answers.every((answer, index) => answer === questions[index].answer)) {
-    return <img src={certificate} alt="Certificate of Completion" />;
+  // Add logic to display a certificate or a fail message
+  if (submitted) {
+    if (answers.every((answer, index) => answer === questions[index].answer)) {
+        return (
+            <div className="game-container">
+                <img src={certificate} alt="Certificate of Completion" />
+            </div>
+        );
+    } else {
+        return (
+            <div className="game-container">
+                <p>FAIL</p>
+            </div>
+        );
+    }
   }
 
   return (
-    <div>
+    <div className="game-container">
+      <div>Time left: {timeLeft}s</div>
       {questions.map((question, index) => (
-        <div key={index}>
+         <div className="question-container" key={index}>
           <p>{question.question}</p>
           {question.options.map((option, optionIndex) => (
             <label key={optionIndex}>
@@ -60,7 +86,7 @@ function GamePage() {
           ))}
         </div>
       ))}
-      <button onClick={handleSubmit}>Submit Answers</button>
+      <button className={BUTTON_PROPERTY} onClick={handleSubmit}>Submit Answers</button>
       {submitted && <Pie data={data} />}
     </div>
   );
