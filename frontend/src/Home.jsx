@@ -9,10 +9,12 @@ import ActionsSection from './components/actions/ActionsSection';
 import GameSection from './components/game/GameSection';
 import About from './components/About';
 import Footer from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function Home() {
   return (
     <>
+      <ScrollToTopButton />
       <Navbar />
       <div>
         <HeroSection />

@@ -5,7 +5,7 @@ export const navItems = [
   { label: "Habitats", href: "habitats" },
   { label: "Threats", href: "threats" },
   { label: "Actions", href: "actions"},
-  { label: "About", href: "about" },
+  { label: "About Us", href: "about" },
 ];
 
 export const title = "Wild Guard";
