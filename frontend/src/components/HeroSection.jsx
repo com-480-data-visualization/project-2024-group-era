@@ -1,6 +1,5 @@
-import { Search } from 'lucide-react'
 import React from 'react'
-import { BUTTON_PROPERTY } from '../constants/button'
+import SearchBar from './SearchBar'
 
 const HeroSection = () => {
   return (
@@ -18,25 +17,7 @@ const HeroSection = () => {
         action towards their conservation. 
       </p>
 
-      <p className='mt-5 text-neutral-500'>Search for the situation of your favorite animal:</p>
-      <div className="flex justify-center mt-5">
-        <input
-          type="text"
-          className="
-          rounded-md py-3 px-4 mx-3 text-neutral-500
-          w-60 border border-neutral-300
-          focus:bg-white focus:border-neutral-500 duration-400 focus:text-black
-          hover:bg-white hover:border-neutral-500 ease-out duration-400 hover:text-black
-          "
-          placeholder="Eg: Tiger"
-        />
-        <a
-          href="#"
-          className={BUTTON_PROPERTY}
-        >
-          <Search size={22} />
-        </a>
-      </div>
+      <SearchBar />
     </div>
   )
 }
