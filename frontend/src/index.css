@@ -4,7 +4,39 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: 'Poppins', sans-serif;
   color-scheme: dark;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.title {
+  @apply md:text-4xl sm:text-3xl font-bold text-white text-center px-3;
+}
+
+.section-container {
+  @apply flex flex-col items-center py-20 rounded-3xl bg-neutral-800 mx-14 mb-8 shadow-2xl;
+}
+
+.chart-container {
+  @apply w-full lg:w-1/2 px-10 pt-20 lg:pt-0;
+}
+
+.custom-tooltip {
+  @apply bg-white rounded-lg p-4 text-neutral-700 shadow-2xl;
+}
+
+.label {
+  @apply font-semibold text-opacity-80;
 }
