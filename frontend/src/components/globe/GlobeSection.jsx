@@ -32,7 +32,7 @@ const GlobeSection = () => {
   };
 
   return (
-    <div id="endangered-species" className="py-24">
+    <div id="endangered-species" className="py-24 px-16 md:px-24">
       <div className="title flex items-center justify-center">
         <div className='toggle-container mr-4' onClick={handleToggle}>
           <div className={`toggle-btn ${!isToggled ? "disable" : ""}`}>
@@ -42,7 +42,7 @@ const GlobeSection = () => {
         <span>Navigation: Explore the distribution of endangered species</span>
       </div>
 
-      <p className='py-10 md:px-32 text-justify'>
+      <p className='py-10 text-justify'>
         The map below shows the distribution of endangered species around the world. The points on the map represent the location of the species, and the color of the points indicates the conservation status of the species. The darker the red, the more endangered the species is.
       </p>
       
