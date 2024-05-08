@@ -45,7 +45,11 @@ const AnimalPage = () => {
           </div>
 
           <div className="w-full lg:w-1/3 flex justify-center">
-            <img src="https://t2.ea.ltmcdn.com/es/posts/5/8/1/cuidados_de_una_capibara_20185_orig.jpg" alt="Animal" className='rounded-lg hover:shadow-lg hover:scale-105 transition transform duration-500' />
+            <img 
+              src="https://ew.com/thmb/ulxnM8McQcjUew-_2BK1AC5dB90=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TikTok-Monkey-2340a4ca3baa45b9adc145d1e5db988b.jpg"
+              alt="Animal photo"
+              className='max-w-[400px] rounded-lg hover:shadow-lg hover:scale-105 transition transform duration-500 hover:shadow-slate-600' 
+            />
           </div>
         </div>
 
