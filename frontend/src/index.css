@@ -8,6 +8,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
 }
 
 :root {
@@ -26,7 +27,7 @@ html, body {
 }
 
 .section-container {
-  @apply flex flex-col items-center py-16 rounded-3xl bg-neutral-800 mx-14 mb-8 shadow-xl hover:shadow-slate-800;
+  @apply flex flex-col items-center py-16 rounded-3xl bg-neutral-800 mx-14 mb-8 shadow-xl hover:shadow-slate-800 mt-20;
 }
 
 .chart-container {

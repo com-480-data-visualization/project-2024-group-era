@@ -41,13 +41,14 @@ const SearchBar = () => {
 
     return (
         <form className='w-[440px] relative'>
-            <p className='mt-5 text-neutral-500'>Search for the situation of your favorite animal:</p>
+            <p className='mt-5 text-gray-200'>Search for the situation of your favorite animal:</p>
             <div className='flex justify-center mt-5'>
                 <input
                     type='text'
                     className='
+                        bg-neutral-900
                         rounded-md py-3 px-4 mx-3 text-neutral-500
-                        w-60 border border-neutral-300
+                        w-60
                         focus:bg-white focus:border-neutral-500 duration-400 focus:text-black
                         hover:bg-white hover:border-neutral-500 ease-out duration-400 hover:text-black
                     '

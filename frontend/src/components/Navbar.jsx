@@ -26,7 +26,7 @@ const Navbar = () => {
     };
 
     return (
-    <nav className="sticky top-0 z-50 py-4 backdrop-blur-lg border-b border-neutral-700/80">
+    <nav className="sticky top-0 left-0 right-0 z-50 py-4 backdrop-blur-lg border-b border-neutral-700/80">
         <div className="px-10 flex items-center justify-between lg:text-sm">
             <div className='flex justify-center items items-center cursor-pointer' onClick={() => scrollToSection('home')}>
                 <img src={logo} alt="logo" className="w-8 h-8 mr-3" />

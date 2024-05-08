@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div className='mx-auto py-20 px-8 max-w-full'>
+      <div>
         <HeroSection />
         <ConservationSection />
         <GlobeSection />
