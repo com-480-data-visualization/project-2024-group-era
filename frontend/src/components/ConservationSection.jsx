@@ -46,10 +46,10 @@ const ConservationSection = () => {
   return (
     <div id="conservation" className="section-container">
       <h1 className="title">Do you know the conservation status of species?</h1>
-      <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-20">
+      <div className="flex flex-col lg:flex-row items-center justify-center mt-10">
         <div className="w-full lg:w-1/2">
           <p className="mx-20 text-justify">
-            Every year the number of species that are threatened with extinction increases. The International Union for Conservation of Nature (IUCN) has developed a system to classify the conservation status of species, where each category represents the risk of extinction. The categories are: Least Concern, Near Threatened, Vulnerable, Endangered, Critically Endangered, Extinct in the Wild, and Extinct. The graph presented in this section shows the number of species in each of these categories.
+            Every year the number of species that are threatened with extinction increases. The International Union for Conservation of Nature (IUCN) has developed a system to classify the conservation status of species, where each category represents the risk of extinction. The categories are: Near Threatened, Vulnerable, Endangered, Critically Endangered, and Extinct. The graph presented in this section shows the number of species in each of these categories.
           </p>
         </div>
         <div className="chart-container">

@@ -32,16 +32,19 @@ const GlobeSection = () => {
   };
 
   return (
-    <div id="endangered-species" className="mx-14 mb-8">
-      <div className="flex flex-col items-center py-20 rounded-3xl bg-neutral-800">
-        <div className="flex items-center justify-center mb-10">
-          <div className='toggle-container' onClick={handleToggle} style={{ marginRight: '1rem' }}>
-            <div className={`toggle-btn ${!isToggled ? "disable" : ""}`}>
-              {isToggled ? '2D' : '3D'}
-            </div>
+    <div id="endangered-species" className="py-44">
+      <div className="title flex items-center justify-center">
+        <div className='toggle-container mr-4' onClick={handleToggle}>
+          <div className={`toggle-btn ${!isToggled ? "disable" : ""}`}>
+            {isToggled ? '2D' : '3D'}
           </div>
-          <span className="text-4xl font-bold whitespace-nowrap">Navigation: Explore the distribution of endangered species.</span>
+        </div>
+        <span>Navigation: Explore the distribution of endangered species</span>
       </div>
+
+      <p className='py-10 md:px-32 text-justify'>
+        The map below shows the distribution of endangered species around the world. The points on the map represent the location of the species, and the color of the points indicates the conservation status of the species. The darker the red, the more endangered the species is.
+      </p>
       
       {/* Conditionally render the map and text based on isToggled */}
       {isToggled ? (
@@ -49,18 +52,10 @@ const GlobeSection = () => {
           <TwoDWorldMap points={points} />
         </div>
       ) : (
-        <div className="flex flex-row items-center justify-center">
-           <div className="w-full lg:w-1/2" style={{ display: 'flex', justifyContent: 'center' }}>
-              <ThreeDGlobe points={points} width={550}/>
-          </div>
-          <div className="w-full lg:w-1/2 px-10">
-            <p className='mx-20'>
-              This section displays the distribution of endangered species around the world. Each point represents an animal, and the darker the red point, the more severe the conservation status of the animal. When a visitor hovers over a point, the information about the animal, such as its name and conservation status, will show up. We provide both 3D and 2D views and also create a toggle that allows a visitor to switch between them. We used the react-globe.gl for the 3D globe and leaflet for the 2D world map with the Mercator projection. We learned the ways to create maps from lecture 8.
-            </p>
-          </div>
+        <div className="w-full flex justify-center">
+          <ThreeDGlobe points={points} width={550}/>
         </div>
       )}
-      </div>
     </div>
   );
 }
