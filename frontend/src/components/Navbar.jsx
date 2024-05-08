@@ -13,7 +13,14 @@ const Navbar = () => {
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'auto' });
+
+            requestAnimationFrame(() => {
+                const topOffset = element.getBoundingClientRect().top;
+                const scrollToPosition = topOffset + window.pageYOffset - 180;
+                window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
+            });
+
             toggleMobileMenu(); // Close mobile menu after clicking on a link
         }
     };

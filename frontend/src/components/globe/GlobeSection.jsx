@@ -32,7 +32,7 @@ const GlobeSection = () => {
   };
 
   return (
-    <div id="endangered-species" className="py-44">
+    <div id="endangered-species" className="py-24">
       <div className="title flex items-center justify-center">
         <div className='toggle-container mr-4' onClick={handleToggle}>
           <div className={`toggle-btn ${!isToggled ? "disable" : ""}`}>
