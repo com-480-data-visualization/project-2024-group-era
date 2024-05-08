@@ -5,7 +5,7 @@ import backgroundImage from '../assets/background.jpg';
 const HeroSection = () => {
   return (
     <header id='home' className='h-screen relative -mt-16'>
-      <div className="absolute inset-0 z-0 bg-center bg-cover" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
+      <div className="absolute inset-0 z-0 bg-center bg-cover" style={{ backgroundImage: `url(${backgroundImage})`}}></div>
       <div className="relative z-10 flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-70">
           <div className="px-4 mx-auto">
             <div className="flex flex-col items-center">
