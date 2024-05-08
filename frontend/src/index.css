@@ -35,9 +35,13 @@ html, body {
 }
 
 .custom-tooltip {
-  @apply bg-white rounded-lg p-4 text-neutral-700 shadow-2xl;
+  @apply bg-white rounded-lg p-4 text-neutral-700 shadow-2xl sm:max-w-40 md:max-w-60 lg:max-w-2xl;
 }
 
 .label {
   @apply font-semibold text-opacity-80;
+}
+
+.description {
+  @apply text-sm text-opacity-60;
 }
