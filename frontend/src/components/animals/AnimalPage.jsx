@@ -43,7 +43,7 @@ const AnimalPage = () => {
         break;
       default:
         color = '#575757';
-        description = 'No information';
+        description = 'Unknown';
         break;
     }
 
@@ -174,7 +174,7 @@ const AnimalPage = () => {
                 <BarChart3 className='mr-4' size={24} />
                 <span>Population</span>
               </h1>
-              <p className="mt-4"><strong>Trend:</strong> { getPopulationTrend(selectedAnimal.populationtrend) } </p>
+              <p className="my-4"><strong>Trend:</strong> { getPopulationTrend(selectedAnimal.populationtrend) } </p>
               <div dangerouslySetInnerHTML={{ __html: selectedAnimal.population }} />
               <p className='mt-4 mb-20 italic'><strong>Source:</strong> { selectedAnimal.citation }</p>
             </div>
