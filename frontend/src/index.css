@@ -26,6 +26,10 @@ html, body {
   @apply md:text-4xl sm:text-3xl font-bold text-white text-center px-3;
 }
 
+.subtitle {
+  @apply text-lg text-opacity-80 text-center pt-2;
+}
+
 .section-container {
   @apply flex flex-col items-center py-16 rounded-3xl bg-neutral-800 mx-14 mb-8 shadow-xl hover:shadow-slate-800 mt-20;
 }
@@ -45,3 +49,4 @@ html, body {
 .description {
   @apply text-sm text-opacity-60;
 }
+

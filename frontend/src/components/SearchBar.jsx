@@ -1,11 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Search } from 'lucide-react'
 import { BUTTON_PROPERTY } from '../constants/button'
-import { animals } from '../data/animals.js'
+import { useNavigate } from 'react-router-dom'
+import animalsData from '../../../data_viz_animals/animals.json';
 
 const SearchBar = () => {
     const [activeSearch, setActiveSearch] = useState([])
     const [selectedAnimal, setSelectedAnimal] = useState('')
+    const [selectedAnimalId, setSelectedAnimalId] = useState(null);
+    const navigate = useNavigate();
+    const searchRef = useRef(null);
+
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (searchRef.current && !searchRef.current.contains(event.target)) {
+                setActiveSearch([]);
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
 
     const handleSearch = (e) => {
         setSelectedAnimal(e.target.value)
@@ -17,8 +35,9 @@ const SearchBar = () => {
             return false
         }
 
-        const searchResults = animals.filter((animal) => {
-            return animal.toLowerCase().includes(searchValue)
+        const searchResults = animalsData.filter((animal) => {
+            return (animal.sci_name && animal.sci_name.toLowerCase().includes(searchValue)) || 
+                   (animal.main_common_name && animal.main_common_name.toLowerCase().includes(searchValue));
         })
 
         setActiveSearch(searchResults)
@@ -26,40 +45,38 @@ const SearchBar = () => {
 
     const completeSearch = (animal) => {
         setActiveSearch([])
-        setSelectedAnimal(animal)
-
-        // Redirect to the animal's page
-        // window.location.href = `/animal/${animal}`
+        setSelectedAnimal(`${animal.sci_name} - ${animal.main_common_name}`)
+        setSelectedAnimalId(animal.id)
     }
 
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter') {
-            // Redirect to the animal's page
-            // window.location.href = `/animal/${selectedAnimal}`
+    const searchAnimal = () => {
+        if(selectedAnimalId !== null) {
+            navigate(`/project-2024-group-era/animal/${selectedAnimalId}`);
+        } else {
+            console.log("No animal selected");
         }
     }
 
     return (
-        <form className='w-[440px] relative'>
+        <form className='w-[440px] relative' ref={searchRef}>
             <p className='mt-5 text-gray-200'>Search for the situation of your favorite animal:</p>
             <div className='flex justify-center mt-5'>
                 <input
                     type='text'
                     className='
-                        bg-neutral-900
+                        bg-neutral-900 w-full
                         rounded-md py-3 px-4 mx-3 text-neutral-500
-                        w-60
-                        focus:bg-white focus:border-neutral-500 duration-400 focus:text-black
-                        hover:bg-white hover:border-neutral-500 ease-out duration-400 hover:text-black
+                        focus:bg-white focus:border-neutral-500 duration-300 focus:text-black
+                        hover:bg-white hover:border-neutral-500 ease-out hover:text-black
                     '
                     placeholder='Eg: Tiger'
                     value={selectedAnimal}
                     onChange={handleSearch}
-                    onKeyDown={handleKeyDown}
                 />
                 <a
                     href='#'
                     className={BUTTON_PROPERTY}
+                    onClick={searchAnimal}
                 >
                     <Search size={22} />
                 </a>
@@ -78,7 +95,7 @@ const SearchBar = () => {
                                     className='py-3 px-4 hover:bg-neutral-700 cursor-pointer'
                                     onClick={() => completeSearch(animal)}
                                 >
-                                    {animal}
+                                    <span>{animal.sci_name || 'Scientific Name Unknown'}</span> - <span>{animal.main_common_name || 'Common Name Unknown'}</span>
                                 </div>
                             ))
                         }
