@@ -10,6 +10,25 @@ const GlobeComponent = ({ points, width }) => {
       }
   }, [globeEl]);
 
+  const getConservationStatus = (conservationStatus) => {
+    if (conservationStatus === 'NT') {
+      return 'Near Threatened';
+    }
+    if (conservationStatus === 'VU') {
+      return 'Vulnerable';
+    }
+    if (conservationStatus === 'EN') {
+      return 'Endangered';
+    }
+    if (conservationStatus === 'CR') {
+      return 'Critically Endangered';
+    }
+    if (conservationStatus === 'EX') {
+      return 'Extinct';
+    }
+    return 'Unknown';
+  };
+
   return (
     <Globe
       ref={globeEl}
@@ -23,9 +42,9 @@ const GlobeComponent = ({ points, width }) => {
       pointColor="color"
       pointRadius={0.5}
       pointLabel={point => `
-        <div style="padding: 5px; font-size: 12px; background: white;">
+        <div style="padding: 10px; font-size: 14px; background: white; min-width: 250px; font-family: 'Poppins', sans-serif; border-radius: 10px;">
           <div style="font-weight: bold; color: black;">${point.name}</div>
-          <div style="color: grey; font-size: 10px;">Conservation status: ${point.conservationStatus}</div>
+          <div style="color: grey;">Conservation status: ${getConservationStatus(point.conservationStatus)}</div>
         </div>
       `}
     />
