@@ -50,3 +50,6 @@ html, body {
   @apply text-sm text-opacity-60;
 }
 
+.question-container {
+  @apply bg-neutral-800 shadow-xl hover:shadow-slate-800;
+}

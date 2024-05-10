@@ -11,8 +11,6 @@
   .question-container {
     margin: 20px 0;
     padding: 10px;
-    border: 1px solid #ccc; 
-    border-radius: 8px;
     width: 80%;               
     max-width: 600px;        
   }
