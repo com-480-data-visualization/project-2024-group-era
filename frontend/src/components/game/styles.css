@@ -4,17 +4,22 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #1c1b22; /* Light grey background */
+    background-color: #1c1b22;
     padding: 20px;
   }
   
   .question-container {
     margin: 20px 0;
     padding: 10px;
-    border: 1px solid #ccc; /* Light grey border */
+    border: 1px solid #ccc; 
     border-radius: 8px;
-    width: 80%; /* Responsive width */
-    max-width: 600px; /* Max width to avoid too wide on large screens */
+    width: 80%;               
+    max-width: 600px;        
+  }
+
+  .question-container label {
+    display: block; /* This will place each option on a new line */
+    margin: 5px 0;  /* Adds a little vertical spacing between options */
   }
   
   button {
@@ -34,4 +39,39 @@
   input[type="radio"] {
     margin-right: 10px;
   }
+
+  .timer-container {
+    position: relative; 
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;         
+    max-width: 600px;   
+  }
   
+  .timer-bar {
+    position: absolute; 
+    left: 0;         
+    top: 0;          
+    bottom: 0;     
+    border-radius: 8px;
+    background-image: linear-gradient(to right, black, red);
+    transition: width 0.8s ease-out;
+  }
+  
+  .timer-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+  }
+  
+  .timer-image.start {
+    left: -100px; 
+    top: -20px; 
+  }
+  
+  .timer-image.end {
+    bottom: -10px; 
+    top: -10px; 
+  }
