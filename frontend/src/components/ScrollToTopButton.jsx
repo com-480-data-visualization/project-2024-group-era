@@ -29,7 +29,7 @@ const ScrollToTopButton = () => {
 
     return (
         <button
-            className={`fixed bottom-8 right-8 z-50 p-5 bg-gray-800 text-white rounded-full transition-opacity ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`fixed bottom-8 right-8 z-50 p-5 bg-gray-500 text-white rounded-full transition-opacity ${isVisible ? 'opacity-100' : 'opacity-0'} hover:bg-green-600`}
             onClick={scrollToTop}
         >
             <ArrowUp size={24} />

@@ -5,6 +5,25 @@ import 'leaflet/dist/leaflet.css';
 function MapComponent({ points }) {
   const mapRef = useRef(null);
 
+  const getConservationStatus = (conservationStatus) => {
+    if (conservationStatus === 'NT') {
+      return 'Near Threatened';
+    }
+    if (conservationStatus === 'VU') {
+      return 'Vulnerable';
+    }
+    if (conservationStatus === 'EN') {
+      return 'Endangered';
+    }
+    if (conservationStatus === 'CR') {
+      return 'Critically Endangered';
+    }
+    if (conservationStatus === 'EX') {
+      return 'Extinct';
+    }
+    return 'Unknown';
+  };
+
   useEffect(() => {
     const map = L.map(mapRef.current, {
       center: [0, 0],  // Center the map at the intersection of the equator and the prime meridian
@@ -27,9 +46,9 @@ function MapComponent({ points }) {
         fillOpacity: 1,         // The fill opacity of the circle marker
         radius: 2               // The radius of the circle marker
         }).addTo(map).bindTooltip(`
-        <div style="padding: 5px; font-size: 12px;">
+        <div style="padding: 5px; font-size: 14px; font-family: 'Poppins', sans-serif;">
             <div style="font-weight: bold;">${point.name}</div>
-            <div style="color: grey; font-size: 10px;">${point.conservationStatus}</div>
+            <div style="color: grey;">Conservation status: ${getConservationStatus(point.conservationStatus)}</div>
         </div>
         `);
     });
