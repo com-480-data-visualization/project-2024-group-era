@@ -25,6 +25,7 @@ const Navbar = () => {
     };
 
     const isAnimalRoute = location.pathname.includes('animal');
+    const isGameRoute = location.pathname.includes('game');
 
     const goToHome = () => {
         if (isAnimalRoute) {
@@ -41,7 +42,7 @@ const Navbar = () => {
                     <img src={logo} alt="logo" className="w-8 h-8 mr-3" />
                     <span className="text-lg tracking-tight">{title}</span>
                 </div>
-                {isAnimalRoute ? ( // If the route contains "animal", render home button
+                {isAnimalRoute || isGameRoute ? ( // If the route contains "animal", render home button
                     <Link to="/project-2024-group-era/" className="text-neutral-100 hover:text-green-600 hidden lg:flex space-x-12">
                         Home
                     </Link>

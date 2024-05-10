@@ -6,6 +6,9 @@ import { BUTTON_PROPERTY } from '../../constants/button';
 import explosion from '../../assets/explosion.gif';
 import cursor from '../../assets/cursor.png';
 import fail from '../../assets/fail.png';
+import Navbar from '../Navbar';
+import ScrollToTopButton from '../ScrollToTopButton';
+import Footer from '../Footer';
 
 const questions = [
     { 
@@ -73,20 +76,33 @@ function GamePage() {
         ]
     };
 
+    // Display the certificate if all answers are correct, otherwise display the fail image
     if (submitted) {
-        if (answers.every((answer, index) => answer === questions[index].answer)) {
-            return (
-                <div className="game-container">
-                    <img src={certificate} style={{width: '50%', height: '50%'}} alt="Certificate of Completion" />
-                </div>
-            );
-        } else {
-            return (
-                <div className="game-container">
-                    <img src={fail} alt="Fail" />
-                </div>
-            );
-        }
+        return (answers.every((answer, index) => answer === questions[index].answer)) ? (
+            <div>
+            <Navbar />
+
+            <ScrollToTopButton />
+
+            <div className="game-container">
+                <img src={certificate} style={{width: '50%', height: '50%'}} alt="Certificate of Completion" />
+            </div>
+            
+            <Footer />
+            </div>
+        ) : (
+            <div>
+            <Navbar />
+
+            <ScrollToTopButton />
+            
+            <div className="game-container">
+                <img src={fail} alt="Fail" />
+            </div>
+
+            <Footer />
+            </div>
+        );
     }
 
     const drainStyle = {
@@ -105,6 +121,12 @@ function GamePage() {
     }
 
     return (
+        <div>
+        <Navbar />
+
+        <ScrollToTopButton />
+
+        {/* Main content of the game page */}
         <div className="game-container">
             <div style={{ marginBottom: '30px' }}> Time left: {timeLeft}s</div>
             <div className="timer-container">
@@ -136,6 +158,9 @@ function GamePage() {
             ))}
             <button className={BUTTON_PROPERTY} onClick={handleSubmit}>Submit Answers</button>
             {submitted && <Pie data={data} />}
+        </div>
+
+        <Footer />
         </div>
     );
 }

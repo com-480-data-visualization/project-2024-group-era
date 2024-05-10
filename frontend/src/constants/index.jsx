@@ -5,6 +5,7 @@ export const navItems = [
   { label: "Habitats", href: "habitats" },
   { label: "Threats", href: "threats" },
   { label: "Actions", href: "actions"},
+  { label: "Game", href: "game"},
   { label: "About Us", href: "about" },
 ];
 
