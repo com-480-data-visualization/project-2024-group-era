@@ -22,7 +22,7 @@ const questions = getRandomQuizzes(quizzes)
 function GamePage() {
     const [answers, setAnswers] = useState(Array(questions.length).fill(null));
     const [submitted, setSubmitted] = useState(false);
-    const [timeLeft, setTimeLeft] = useState(3000);
+    const [timeLeft, setTimeLeft] = useState(30);
     const [hintsVisible, setHintsVisible] = useState(Array(questions.length).fill(false));
 
     useEffect(() => {
