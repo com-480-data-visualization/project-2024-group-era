@@ -1,3 +1,5 @@
+// Reference: We learnt how to build circluar packing from: https://observablehq.com/@d3/circle-packing
+
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 
@@ -90,4 +92,4 @@ const CirclePacking = ({ width, data }) => {
 
 export default CirclePacking;
 
-// Reference: https://observablehq.com/@d3/circle-packing
+

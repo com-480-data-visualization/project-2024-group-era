@@ -1,38 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { Pie } from 'react-chartjs-2';
-import certificate from '../../assets/certificate.png';
+import { quizzes } from './quiz';
 import './styles.css';
 import { BUTTON_PROPERTY } from '../../constants/button';
 import explosion from '../../assets/explosion.gif';
 import cursor from '../../assets/cursor.png';
+import certificate from '../../assets/certificate.png';
 import fail from '../../assets/fail.png';
 import Navbar from '../Navbar';
 import ScrollToTopButton from '../ScrollToTopButton';
 import Footer from '../Footer';
 
-const questions = [
-    { 
-        question: "A taxon which is facing an extremely high risk of extinction in the wild in immediate future is known as", 
-        options: ["Critically Endangered", "Exotic", "Vulnerable", "Rare"], 
-        answer: 0, 
-        hint: "Conservation Status: \n (1) Critically Endangered \n • A species facing an extremely high risk of extinction in the wild is known as critically endangered. \n • Example: Black rhino, Red wolf, Northern white rhino, etc. \n (2) Endangered \n • Species face a very high risk of extinction in the wild known as endangered. \n • Example: Asian elephants, Blue whales, Green sea turtles, etc. \n (3) Vulnerable \n • Species that face a high risk of extinction in the wild are known as vulnerable. \n • Example: Blackbuck, Blue sheep, etc. \n (4) Rare \n • Species that are uncommon, scarce, or infrequently encountered are labelled as rare. \n • Example: Himalayan brown bear, etc. \n (5) Exotic \n • Species of plants and animals that are non-native i.e. an area where they do not occur naturally but are introduced into the system from outside are exotic. \n • Example: Nilgiri tahr etc."
-    },
-    { 
-        question: "The term alpha diversity refers to", 
-        options: ["Genetic diversity", "Community and ecosystem diversity", "Species diversity", "More than one of the above"], 
-        answer: 2, 
-        hint: "Biodiversity can be discussed at three levels: \n • Genetic diversity: refers to the variation of genes within species. \n • Species diversity: refers to the variety of species. It relates to the number of species in a defined area. \n • Ecosystem diversity: refers to differences between ecosystem types and the diversity of habitats and ecological processes occurring within each ecosystem. \n \n Alpha diversity (α-diversity) is defined as the mean diversity of species in different sites or habitats on a local scale."
-    },
-    { 
-        question: "Red Data Book keeps a record of", 
-        options: ["Red flowered plant", "All plant and animals present on the earth", "Endangered plants and animals", "More than one of the above"], 
-        answer: 2, hint: "The Red Data Book, often referred to as the Red List, is the sourcebook which keeps a record of all the endangered animals and plants. This book is maintained by the International Union for Conservation of Nature (IUCN). This book aims to highlight species that are facing a high risk of global extinction, providing valuable data on the trends in species conservation status over time. This helps guide conservation efforts and policies globally to protect these species and their habitats."},
-];
+// Function to shuffle quizzes and get three random ones
+export function getRandomQuizzes(quizzes) {
+    const shuffledQuizzes = quizzes.sort(() => 0.5 - Math.random());
+    return shuffledQuizzes.slice(0, 3);
+}
+
+const questions = getRandomQuizzes(quizzes)
+// const questions = quizzes;
 
 function GamePage() {
     const [answers, setAnswers] = useState(Array(questions.length).fill(null));
     const [submitted, setSubmitted] = useState(false);
-    const [timeLeft, setTimeLeft] = useState(30);
+    const [timeLeft, setTimeLeft] = useState(3000);
     const [hintsVisible, setHintsVisible] = useState(Array(questions.length).fill(false));
 
     useEffect(() => {
