@@ -59,7 +59,7 @@ const SearchBar = () => {
 
     return (
         <form className='w-[440px] relative' ref={searchRef}>
-            <p className='mt-5 text-gray-200'>Search for the situation of your favorite animal:</p>
+            <p className='mt-5 text-gray-200'>Search for the situation of:</p>
             <div className='flex justify-center mt-5'>
                 <input
                     type='text'
@@ -69,7 +69,7 @@ const SearchBar = () => {
                         focus:bg-white focus:border-neutral-500 duration-300 focus:text-black
                         hover:bg-white hover:border-neutral-500 ease-out hover:text-black
                     '
-                    placeholder='Eg: Tiger'
+                    placeholder='Eg: Catfish'
                     value={selectedAnimal}
                     onChange={handleSearch}
                 />

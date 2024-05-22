@@ -5,6 +5,7 @@ import Footer from '../Footer';
 import { BarChart3, Earth, Info, LayoutDashboard, ShieldAlert, Sprout } from 'lucide-react';
 import animalData from '../../../../data_viz_animals/animals.json';
 import ScrollToTopButton from '../ScrollToTopButton';
+import placeholderImage from '../../assets/placeholder_img.jpg';
 
 // The icon used in this page is from: https://www.flaticon.com/free-icon/alert_10263464?term=threat&page=1&position=56&origin=search&related_id=10263464
 
@@ -88,6 +89,22 @@ const AnimalPage = () => {
     });
   }
 
+  const importImage = async () => {
+    try {
+      const imageModule = await import(`../../assets/animals/${selectedAnimal.id}.jpg`);
+      return imageModule.default; // Assuming you're using ES modules
+    } catch (error) {
+      console.error('Error loading image:', error);
+    }
+  };
+
+  const [image, setImage] = React.useState(null);
+
+  // Load the image when the component mounts
+  React.useEffect(() => {
+    importImage().then(setImage);
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -135,7 +152,7 @@ const AnimalPage = () => {
 
             <div className="w-full lg:w-1/3 flex justify-center">
               <img 
-                src="https://ew.com/thmb/ulxnM8McQcjUew-_2BK1AC5dB90=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TikTok-Monkey-2340a4ca3baa45b9adc145d1e5db988b.jpg"
+                src={image || placeholderImage}
                 alt="Animal photo"
                 className='max-h-[500px] rounded-lg hover:shadow-lg hover:scale-105 transition transform duration-500 hover:shadow-slate-600' 
               />
@@ -160,11 +177,11 @@ const AnimalPage = () => {
                 <ShieldAlert className='mr-4' size={24} />
                 <span>Threads</span>
               </h1>
-              <p className="mt-4 pl-4 pb-10 lg:pb-0">
+              <div className="mt-4 pl-4 pb-10 lg:pb-0">
                 <ul className='list-disc list-image-alert'>
                   { formatThreats(selectedAnimal.threats) }
                 </ul>
-              </p>
+              </div>
             </div>
 
             <div className='border border-gray-500 my-10'></div>
