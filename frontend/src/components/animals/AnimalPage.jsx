@@ -6,12 +6,36 @@ import { BarChart3, Earth, Info, LayoutDashboard, ShieldAlert, Sprout } from 'lu
 import animalData from '../../../../data_viz_animals/animals.json';
 import ScrollToTopButton from '../ScrollToTopButton';
 import placeholderImage from '../../assets/placeholder_img.jpg';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 // The icon used in this page is from: https://www.flaticon.com/free-icon/alert_10263464?term=threat&page=1&position=56&origin=search&related_id=10263464
+
+const categoryValues = {
+  'Near Threatened': 1,
+  'Vulnerable': 2,
+  'Endangered': 3,
+  'Critically Endangered': 4,
+  'Extinct': 5,
+};
+
+const categoryColors = {
+  'Near Threatened': '#FFBA08',
+  'Vulnerable': '#F48C06',
+  'Endangered': '#E85D04',
+  'Critically Endangered': '#DC2F02',
+  'Extinct': '#9D0208',
+};
 
 const AnimalPage = () => {
   const { id } = useParams();
   const selectedAnimal = animalData.find(animal => animal.id === id);
+
+  selectedAnimal.history.sort((a, b) => a.year - b.year);
+
+  const data = selectedAnimal.history.map(entry => ({
+    year: entry.year,
+    status: categoryValues[entry.category],
+  }));
 
   const getConservationStatus = (category) => {
     let color = '';
@@ -105,6 +129,42 @@ const AnimalPage = () => {
     importImage().then(setImage);
   }, []);
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (!payload || payload.length === 0) {
+      return null;
+    }
+
+    const { year, status } = payload[0].payload;
+    let value = '';
+
+    switch (status) {
+      case 1:
+        value = 'Near Threatened';
+        break;
+      case 2:
+        value = 'Vulnerable';
+        break;
+      case 3:
+        value = 'Endangered';
+        break;
+      case 4:
+        value = 'Critically Endangered';
+        break;
+      case 5:
+        value = 'Extinct';
+        break;
+      default:
+        value = '';
+    }
+
+    return (
+      <div className="custom-tooltip">
+        <p className="label">{`Year: ${year}`}</p>
+        <p>{`Status: ${value}`}</p>
+      </div>
+    );
+  }
+
   return (
     <div>
       <Navbar />
@@ -193,8 +253,48 @@ const AnimalPage = () => {
               </h1>
               <p className="my-4"><strong>Trend:</strong> { getPopulationTrend(selectedAnimal.populationtrend) } </p>
               <div dangerouslySetInnerHTML={{ __html: selectedAnimal.population }} />
-              <p className='mt-4 mb-20 italic'><strong>Source:</strong> { selectedAnimal.citation }</p>
             </div>
+
+            <p className='mt-4 mb-7'>
+              <strong>Historical conservation status:</strong>
+            </p>
+            <div className="chart-container mb-4" style={{ width: '100%', height: 400 }}>
+              <ResponsiveContainer>
+                <LineChart
+                  data={data}
+                  margin={{
+                    top: 5,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                  }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="year" />
+                  <YAxis domain={[1, 5]} tickFormatter={(value) => {
+                    switch (value) {
+                      case 1:
+                        return 'Near Threatened';
+                      case 2:
+                        return 'Vulnerable';
+                      case 3:
+                        return 'Endangered';
+                      case 4:
+                        return 'Critically Endangered';
+                      case 5:
+                        return 'Extinct';
+                      default:
+                        return '';
+                    }
+                  }}
+                  style={{ fontSize: '12px' }} />
+                  <Tooltip content={<CustomTooltip />}/>
+                  <Line type="monotone" dataKey="status" stroke="red" activeDot={{ r: 8 }} />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+
+            <p className='mb-10'><strong>Source:</strong> { selectedAnimal.citation }</p>
           </div>
         </div>
       )}
