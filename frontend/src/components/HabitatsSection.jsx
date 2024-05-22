@@ -1,5 +1,6 @@
-import treemap from '../assets/treemap.png';
 import React from 'react'
+import Treemap from './treemap/Treemap'
+import { data } from './treemap/data'
 
 const HabitatsSection = () => {
   return (
@@ -13,8 +14,8 @@ const HabitatsSection = () => {
             </p>
           </div>
           <div className="chart-container">
-            <img src={treemap} alt="Habitats" className="rounded-lg" />
-          </div>
+            <Treemap data={data} width={550} height={500} />
+          </div>      
         </div>
         </div>
     </div>
