@@ -45,7 +45,7 @@ const SearchBar = () => {
 
     const completeSearch = (animal) => {
         setActiveSearch([])
-        setSelectedAnimal(`${animal.sci_name} - ${animal.main_common_name}`)
+        setSelectedAnimal(animal.sci_name + (animal.main_common_name ? ` - ${animal.main_common_name}` : ''))
         setSelectedAnimalId(animal.id)
     }
 
