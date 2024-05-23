@@ -29,7 +29,7 @@ const Navbar = () => {
 
     const goToHome = () => {
         if (isAnimalRoute) {
-            navigate('/project-2024-group-era/');
+            navigate('/project-2024-group-era/home');
         } else {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -43,7 +43,7 @@ const Navbar = () => {
                     <span className="text-lg tracking-tight">{title}</span>
                 </div>
                 {isAnimalRoute || isGameRoute ? ( // If the route contains "animal", render home button
-                    <Link to="/project-2024-group-era/" className="text-neutral-100 hover:text-green-600 hidden lg:flex space-x-12">
+                    <Link to="/project-2024-group-era/home" className="text-neutral-100 hover:text-green-600 hidden lg:flex space-x-12">
                         Home
                     </Link>
                 ) : ( // Otherwise, render complete menu

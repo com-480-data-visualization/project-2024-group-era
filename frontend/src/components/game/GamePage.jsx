@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { quizzes } from './quiz';
-import './styles.css';
+import './GameStyles.css';
 import { BUTTON_PROPERTY } from '../../constants/button';
 import explosion from '../../assets/explosion.gif';
 import cursor from '../../assets/cursor.png';
@@ -138,7 +138,7 @@ function GamePage() {
                             {option}
                         </label>
                     ))}
-                    <button className={BUTTON_PROPERTY} style={{padding: '5px 10px', fontSize: '12px'}} onClick={() => toggleHint(index)}>
+                    <button className={BUTTON_PROPERTY} style={{padding: '5px 10px', marginLeft: '0px', fontSize: '12px'}} onClick={() => toggleHint(index)}>
                         {hintsVisible[index] ? "Hide Hint" : "Show Hint"}
                     </button>
                     <div className="hint" style={{ fontSize: '12px' }}>
