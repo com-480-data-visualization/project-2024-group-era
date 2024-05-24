@@ -69,7 +69,7 @@ const SearchBar = () => {
                         focus:bg-white focus:border-neutral-500 duration-300 focus:text-black
                         hover:bg-white hover:border-neutral-500 ease-out hover:text-black
                     '
-                    placeholder='Eg: Catfish'
+                    placeholder='Eg: Herichthys labridens'
                     value={selectedAnimal}
                     onChange={handleSearch}
                 />

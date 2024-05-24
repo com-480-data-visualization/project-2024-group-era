@@ -16,10 +16,9 @@ export function getRandomQuizzes(quizzes) {
     return shuffledQuizzes.slice(0, 3);
 }
 
-const questions = getRandomQuizzes(quizzes)
-// const questions = quizzes;
-
 function GamePage() {
+    const [questions, setQuestions] = useState(getRandomQuizzes(quizzes));
+    // const questions = quizzes;
     const [answers, setAnswers] = useState(Array(questions.length).fill(null));
     const [submitted, setSubmitted] = useState(false);
     const [timeLeft, setTimeLeft] = useState(30);
@@ -66,6 +65,15 @@ function GamePage() {
         ]
     };
 
+    const resetGame = () => {
+        setQuestions(getRandomQuizzes(quizzes)); // Update the questions if you're reshuffling
+        setAnswers(Array(questions.length).fill(null));
+        setSubmitted(false);
+        setTimeLeft(30);
+        setHintsVisible(Array(questions.length).fill(false));
+        navigate("/project-2024-group-era/game"); // Navigate back to the game
+    };
+
     // Display the certificate if all answers are correct, otherwise display the fail image
     if (submitted) {
         return (answers.every((answer, index) => answer === questions[index].answer)) ? (
@@ -88,7 +96,10 @@ function GamePage() {
             
             <div className="game-container">
                 <img src={fail} alt="Fail" />
-            </div>
+                <button className={BUTTON_PROPERTY} onClick={resetGame} style={{ marginTop: '20px' }}>
+                    Try Again
+                </button>
+            </div> 
 
             <Footer />
             </div>

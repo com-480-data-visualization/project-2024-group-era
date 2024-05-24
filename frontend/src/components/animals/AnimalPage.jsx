@@ -116,7 +116,7 @@ const AnimalPage = () => {
   const importImage = async () => {
     try {
       const imageModule = await import(`../../assets/animals/${selectedAnimal.id}.jpg`);
-      return imageModule.default; // Assuming you're using ES modules
+      return imageModule.default; 
     } catch (error) {
       console.error('Error loading image:', error);
     }
@@ -255,6 +255,7 @@ const AnimalPage = () => {
               <div dangerouslySetInnerHTML={{ __html: selectedAnimal.population }} />
             </div>
 
+            {/* Here is the line chart of the conservation status revolution. */}
             <p className='mt-4 mb-7'>
               <strong>Historical conservation status:</strong>
             </p>
@@ -266,11 +267,11 @@ const AnimalPage = () => {
                     top: 5,
                     right: 30,
                     left: 20,
-                    bottom: 5,
+                    bottom: 15,
                   }}
                 >
                   <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="year" />
+                  <XAxis dataKey="year" angle={-45} textAnchor="end" />
                   <YAxis domain={[1, 5]} tickFormatter={(value) => {
                     switch (value) {
                       case 1:

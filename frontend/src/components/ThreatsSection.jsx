@@ -41,7 +41,7 @@ const ThreatsSection = () => {
                     <Label value="Threats" offset={5} position="insideLeft" angle={-90} fill="#fff" />
                   </YAxis>
                   <Tooltip content={<CustomTooltip />} />
-                  <Bar dataKey="counts" fill="#8884d8" label={{ position: 'insideRight' }}>
+                  <Bar dataKey="counts" fill="#8884d8" label={{ position: 'right' }}>
                     {data.map((entry, index) => (
                       <Cell key={index} fill={entry.color} />
                     ))}
