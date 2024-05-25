@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { quizzes } from './quiz';
-import './styles.css';
+import './GameStyles.css';
 import { BUTTON_PROPERTY } from '../../constants/button';
 import explosion from '../../assets/explosion.gif';
 import cursor from '../../assets/cursor.png';
@@ -16,10 +16,9 @@ export function getRandomQuizzes(quizzes) {
     return shuffledQuizzes.slice(0, 3);
 }
 
-const questions = getRandomQuizzes(quizzes)
-// const questions = quizzes;
-
 function GamePage() {
+    const [questions, setQuestions] = useState(getRandomQuizzes(quizzes));
+    // const questions = quizzes;
     const [answers, setAnswers] = useState(Array(questions.length).fill(null));
     const [submitted, setSubmitted] = useState(false);
     const [timeLeft, setTimeLeft] = useState(30);
@@ -66,6 +65,15 @@ function GamePage() {
         ]
     };
 
+    const resetGame = () => {
+        setQuestions(getRandomQuizzes(quizzes)); // Update the questions if you're reshuffling
+        setAnswers(Array(questions.length).fill(null));
+        setSubmitted(false);
+        setTimeLeft(30);
+        setHintsVisible(Array(questions.length).fill(false));
+        navigate("/project-2024-group-era/game"); // Navigate back to the game
+    };
+
     // Display the certificate if all answers are correct, otherwise display the fail image
     if (submitted) {
         return (answers.every((answer, index) => answer === questions[index].answer)) ? (
@@ -88,7 +96,10 @@ function GamePage() {
             
             <div className="game-container">
                 <img src={fail} alt="Fail" />
-            </div>
+                <button className={BUTTON_PROPERTY} onClick={resetGame} style={{ marginTop: '20px' }}>
+                    Try Again
+                </button>
+            </div> 
 
             <Footer />
             </div>
@@ -138,7 +149,7 @@ function GamePage() {
                             {option}
                         </label>
                     ))}
-                    <button className={BUTTON_PROPERTY} style={{padding: '5px 10px', fontSize: '12px'}} onClick={() => toggleHint(index)}>
+                    <button className={BUTTON_PROPERTY} style={{padding: '5px 10px', marginLeft: '0px', fontSize: '12px'}} onClick={() => toggleHint(index)}>
                         {hintsVisible[index] ? "Hide Hint" : "Show Hint"}
                     </button>
                     <div className="hint" style={{ fontSize: '12px' }}>

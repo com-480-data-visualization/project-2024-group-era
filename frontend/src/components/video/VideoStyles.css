@@ -1,0 +1,25 @@
+.video-responsive {
+    position: absolute;
+    width: 100%;         /* Ensure it fills the width of its parent */
+    height: 0;
+    padding-top: 56.25%; /* Maintains a 16:9 aspect ratio */
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.video-names {
+    position: relative;
+    top:65vh;
+    left:45vw;
+    width: 100%;
+    text-align: left;
+    color: white; 
+    padding: 10px 0; /* Padding for better readability */
+    font-size: 18px; 
+}
