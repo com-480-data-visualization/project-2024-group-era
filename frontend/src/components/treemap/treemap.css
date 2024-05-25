@@ -1,17 +1,92 @@
-.container .rectangle {
-    transition-duration: .3s;
+.treemap-container {
+    position: relative;
+  }
+  
+  .container {
+    display: block;
+    margin: auto;
+  }
+  
+  .container .rectangle {
+    transition-duration: 0.3s;
     transition-property: filter, opacity;
     border-radius: 25px;
     opacity: 1;
     filter: saturate(100%);
-}
-
-.container:hover .rectangle {
-    opacity: .4;
+  }
+  
+  .container:hover .rectangle {
+    opacity: 0.4;
     filter: saturate(50%);
-}
-
-.container .rectangle:hover {
+  }
+  
+  .container .rectangle:hover {
     opacity: 1;
     filter: saturate(100%);
-}
+  }
+  
+  .opacity-80 {
+    opacity: 0.8;
+  }
+  
+  .hover\\:opacity-100:hover {
+    opacity: 1;
+  }
+  
+  .rectangle-shape {
+    border-radius: 10px;
+    transition: fill 0.3s, transform 0.3s;
+  }
+  
+  .rectangle.hovered .rectangle-shape {
+    transform: scale(1.05);
+  }
+  
+  .rectangle:not(.hovered) .rectangle-shape {
+    opacity: 0.3;
+  }
+  
+  .hover-info {
+    position: absolute;
+    top: -30px; /* Adjust based on your needs */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Set the text color to white */
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    pointer-events: none; /* Ensure it doesn't interfere with mouse events */
+    white-space: nowrap;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+  
+  .color-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .category-name {
+    color: white;
+  }
+  
+  .legend-item.hovered .category-name {
+    font-weight: bold;
+    transform: scale(1.1);
+  }
+  

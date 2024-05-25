@@ -10,7 +10,9 @@ const HabitatsSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-20">
           <div className="w-full lg:w-1/2">
             <p className="px-20 text-justify">
-              This sections allows users to explore how species are distributed across different habitats. This section is a tree map (inspired by lecture 5) to visualize the proportions and that provides detailed information about the habitats, giving users a better understanding of the ecosystems and environments that support these animals. To improve visualization we plan that users can select categories such as "endangered" or "critically endangered" and visualize the habitat distribution of species within those categories. 
+            Welcome to the Habitat Distribution Treemap! This interactive section allows you to explore how different species are distributed across various habitats.
+            <br />
+            Hover over any square in the treemap to see detailed information about that habitat. The top section will display the habitat name and count, giving you immediate insights into the specific habitat and the number of species it supports.
             </p>
           </div>
           <div className="chart-container">

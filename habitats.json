@@ -1,0 +1,394 @@
+[
+  {
+    "type": "node",
+    "name": "Wetlands (inland) ",
+    "value": 0,
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Permanent Rivers/Streams/Creeks (includes waterfalls)",
+        "value": 1033
+      },
+      {
+        "type": "leaf",
+        "name": " Permanent Freshwater Marshes/Pools (under 8ha)",
+        "value": 131
+      },
+      {
+        "type": "leaf",
+        "name": " Permanent Freshwater Lakes (over 8ha)",
+        "value": 254
+      },
+      {
+        "type": "leaf",
+        "name": " Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)",
+        "value": 68
+      },
+      {
+        "type": "leaf",
+        "name": " Bogs, Marshes, Swamps, Fens, Peatlands",
+        "value": 109
+      },
+      {
+        "type": "leaf",
+        "name": " Seasonal/Intermittent Freshwater Lakes (over 8ha)",
+        "value": 27
+      },
+      {
+        "type": "leaf",
+        "name": " Seasonal/Intermittent/Irregular Rivers/Streams/Creeks",
+        "value": 86
+      },
+      {
+        "type": "leaf",
+        "name": " Freshwater Springs and Oases",
+        "value": 100
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Forest ",
+    "value": 0,
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Moist Lowland",
+        "value": 389
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Dry",
+        "value": 32
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Moist Montane",
+        "value": 193
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Swamp",
+        "value": 91
+      },
+      {
+        "type": "leaf",
+        "name": " Temperate",
+        "value": 59
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Mangrove Vegetation Above High Tide Level",
+        "value": 4
+      },
+      {
+        "type": "leaf",
+        "name": " Boreal",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Artificial/Aquatic ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Water Storage Areas (over 8ha)",
+        "value": 12
+      },
+      {
+        "type": "leaf",
+        "name": " Ponds (below 8ha)",
+        "value": 9
+      },
+      {
+        "type": "leaf",
+        "name": " Canals and Drainage Channels, Ditches",
+        "value": 8
+      },
+      {
+        "type": "leaf",
+        "name": " Irrigated Land (includes irrigation channels)",
+        "value": 7
+      },
+      {
+        "type": "leaf",
+        "name": " Seasonally Flooded Agricultural Land",
+        "value": 4
+      },
+      {
+        "type": "leaf",
+        "name": " Karst and Other Subterranean Hydrological Systems (human",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Desert ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Temperate",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Marine Deep Benthic ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Deep Sea Vents (Rifts/Seeps)",
+        "value": 159
+      },
+      {
+        "type": "leaf",
+        "name": " Seamount",
+        "value": 9
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Grassland ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical High Altitude",
+        "value": 31
+      },
+      {
+        "type": "leaf",
+        "name": " Temperate",
+        "value": 26
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Seasonally Wet/Flooded",
+        "value": 3
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Dry",
+        "value": 13
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Savanna ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Dry",
+        "value": 27
+      },
+      {
+        "type": "leaf",
+        "name": " Moist",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Rocky areas (eg. inland cliffs, mountain peaks)",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": null,
+        "value": 40
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Artificial/Terrestrial ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Plantations",
+        "value": 9
+      },
+      {
+        "type": "leaf",
+        "name": " Pastureland",
+        "value": 4
+      },
+      {
+        "type": "leaf",
+        "name": " Rural Gardens",
+        "value": 3
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Heavily Degraded Former Forest",
+        "value": 1
+      },
+      {
+        "type": "leaf",
+        "name": " Urban Areas",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Shrubland ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Dry",
+        "value": 9
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical Moist",
+        "value": 10
+      },
+      {
+        "type": "leaf",
+        "name": " Mediterranean",
+        "value": 21
+      },
+      {
+        "type": "leaf",
+        "name": " Temperate",
+        "value": 23
+      },
+      {
+        "type": "leaf",
+        "name": " Subtropical/Tropical High Altitude",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Marine Coastal/Supratidal ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Coastal Sand Dunes",
+        "value": 6
+      },
+      {
+        "type": "leaf",
+        "name": " Sea Cliffs and Rocky Offshore Islands",
+        "value": 5
+      },
+      {
+        "type": "leaf",
+        "name": " Coastal Brackish/Saline Lagoons/Marine Lakes",
+        "value": 5
+      },
+      {
+        "type": "leaf",
+        "name": " Coastal Freshwater Lakes",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Marine Intertidal ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Salt Marshes (Emergent Grasses)",
+        "value": 7
+      },
+      {
+        "type": "leaf",
+        "name": " Mangrove Submerged Roots",
+        "value": 4
+      },
+      {
+        "type": "leaf",
+        "name": " Mud Flats and Salt Flats",
+        "value": 1
+      },
+      {
+        "type": "leaf",
+        "name": " Rocky Shoreline",
+        "value": 1
+      },
+      {
+        "type": "leaf",
+        "name": " Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc",
+        "value": 1
+      },
+      {
+        "type": "leaf",
+        "name": " Shingle and/or Pebble Shoreline and/or Beaches",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "type": "node",
+    "name": "Marine Neritic ",
+    "value": 0,
+    "color": "green",
+    "children": [
+      {
+        "type": "leaf",
+        "name": " Estuaries",
+        "value": 5
+      },
+      {
+        "type": "leaf",
+        "name": " Pelagic",
+        "value": 1
+      },
+      {
+        "type": "leaf",
+        "name": " Subtidal Rock and Rocky Reefs",
+        "value": 1
+      },
+      {
+        "type": "leaf",
+        "name": " Subtidal Loose Rock/pebble/gravel",
+        "value": 1
+      },
+      {
+        "type": "leaf",
+        "name": " Subtidal Sandy",
+        "value": 3
+      },
+      {
+        "type": "leaf",
+        "name": " Seagrass (Submerged)",
+        "value": 2
+      },
+      {
+        "type": "leaf",
+        "name": " Subtidal Muddy",
+        "value": 1
+      }
+    ]
+  }
+]
