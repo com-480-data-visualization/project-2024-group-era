@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: #1c1b22;
+    height: 100vh;
+    background-color: #121212;
     padding: 20px;
   }
   
@@ -73,3 +73,4 @@
     bottom: -10px; 
     top: -10px; 
   }
+

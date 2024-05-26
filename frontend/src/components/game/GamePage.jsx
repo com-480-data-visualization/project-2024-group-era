@@ -9,6 +9,7 @@ import fail from '../../assets/fail.png';
 import Navbar from '../Navbar';
 import ScrollToTopButton from '../ScrollToTopButton';
 import Footer from '../Footer';
+import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 
 // Function to shuffle quizzes and get three random ones
 export function getRandomQuizzes(quizzes) {
@@ -23,6 +24,7 @@ function GamePage() {
     const [submitted, setSubmitted] = useState(false);
     const [timeLeft, setTimeLeft] = useState(30);
     const [hintsVisible, setHintsVisible] = useState(Array(questions.length).fill(false));
+    const [activeIndex, setActiveIndex] = useState(-1);
 
     useEffect(() => {
         if (timeLeft > 0) {
@@ -74,6 +76,33 @@ function GamePage() {
         navigate("/project-2024-group-era/game"); // Navigate back to the game
     };
 
+    
+    // Pie chart to display wrong answers
+    const pieData = [
+        { name: "Correct", value: calculateResults()[0], questions: questions.filter((q, index) => answers[index] === q.answer) },
+        { name: "Wrong", value: calculateResults()[1], questions: questions.filter((q, index) => answers[index] !== q.answer) }
+    ];
+
+    const CustomTooltip = ({ active, payload }) => {
+        if (active && payload && payload.length) {
+            return (
+                <div className="custom-tooltip" style={{ backgroundColor: '#fff', padding: '10px', border: '1px solid #dcdcdc' }}>
+                    <p className="label">{payload[0].name} Answers:</p>
+                    <ul>
+                        {payload[0].payload.questions.map((item, index) => (
+                            <li key={index}>
+                                Q: {item.question} <br />
+                                A: {item.options[item.answer]}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
+
+        return null;
+    };
+
     // Display the certificate if all answers are correct, otherwise display the fail image
     if (submitted) {
         return (answers.every((answer, index) => answer === questions[index].answer)) ? (
@@ -95,8 +124,20 @@ function GamePage() {
             <ScrollToTopButton />
             
             <div className="game-container">
-                <img src={fail} alt="Fail" />
-                <button className={BUTTON_PROPERTY} onClick={resetGame} style={{ marginTop: '20px' }}>
+                <img src={fail} style={{width: '20%', height: '20%', marginBottom: '50px'}} alt="Fail" />
+                <p style={{ width: '45%', textAlign: 'left', marginBottom: '-10px' }}>
+                    <span style={{ fontWeight: 'bold' }}>Results report:</span> Don't be discouraged; you're doing a great job! Please hover over the pie chart to check the questions and their corresponding correct answers, then try again. We're confident you'll succeed in rescuing those animals!
+                </p>
+                <ResponsiveContainer width="100%" height={300}>
+                    <PieChart>
+                        <Pie dataKey="value" isAnimationActive={true} data={pieData} cx="50%" cy="50%" outerRadius={100} fill="#8884d8">
+                            {pieData.map((entry, index) => <Cell key={`cell-${index}`} fill={index === 0 ? '#82ca9d' : '#ff726f'} />)}
+                        </Pie>
+                        <Legend align="center" verticalAlign="bottom" layout="horizontal" />
+                        <Tooltip content={<CustomTooltip />} />
+                    </PieChart>
+                </ResponsiveContainer>
+                <button className={BUTTON_PROPERTY} onClick={resetGame} style={{ marginTop: '50px' }}>
                     Try Again
                 </button>
             </div> 

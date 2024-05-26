@@ -11,24 +11,23 @@ const VideoSection = () => {
     };
 
     return (
-        <div className="items-center">
+        <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
             <div className="video-responsive">
                 <iframe 
                     src="https://www.youtube.com/embed/cvFVhOVkarw?autoplay=1&mute=0"
                     frameBorder="0"
-                    allow="autoplay"
+                    allow="autoplay; fullscreen"
                     title="YouTube video player"
-                    allowFullScreen
                 />
             </div>
-            <button className={BUTTON_PROPERTY} style={{ position: 'absolute', right: 10, bottom: 15 }} onClick={skipVideo}>
+            <button className={BUTTON_PROPERTY} style={{ position: 'absolute', right: 10, bottom: 10 }} onClick={skipVideo}>
                 LET'S GO
             </button>
             <div className="video-names">
-                    <span role="img" aria-label="sheep">🌍</span> Group ERA:&nbsp;&nbsp;&nbsp;<br />
-                    <span role="img" aria-label="sheep">🦙</span> Adriana Orellana<br />
-                    <span role="img" aria-label="sheep">🦙</span> Angel   Zenteno   <br />
-                    <span role="img" aria-label="sheep">🐼</span> Jianan  Xu
+                <span role="img" aria-label="world">🌍</span> Group ERA:&nbsp;&nbsp;&nbsp;<br />
+                <span role="img" aria-label="llama">🦙</span> Adriana Orellana<br />
+                <span role="img" aria-label="llama">🦙</span> Angel Zenteno<br />
+                <span role="img" aria-label="panda">🐼</span> Jianan Xu
             </div>
         </div>
     );

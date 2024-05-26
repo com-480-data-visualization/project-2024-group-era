@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import animalsData from '../../../../data_viz_animals/animals.json';
-import { CONSERVATION_STATUSES } from '../../constants/conservationStatuses.jsx';  
 import TwoDWorldMap from './TwoDWorldMap';
 import ThreeDGlobe from './ThreeDGlobe';
-import "../toggle/Toggle.css";
-
+import "./Toggle.css";
 
 // Adjust the color based on conservation status. The higher the conservation status, the darker the red should be.
+const CONSERVATION_STATUSES = {
+  "NT": 0,
+  "VU": 1,
+  "EN": 2,
+  "CR": 3,
+  "EW": 4,
+  "EX": 5
+};
 const colorScale = d => `rgba(255, ${100 + 155 * (1 - d / 5)}, ${100 + 155 * (1 - d / 5)}, 1)`;
 
 // Format data in a component
