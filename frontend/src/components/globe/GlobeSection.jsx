@@ -49,7 +49,14 @@ const GlobeSection = () => {
       </div>
 
       <p className='py-10 text-justify'>
-        The map below shows the distribution of endangered species around the world. The points on the map represent the location of the species, and the color of the points indicates the conservation status of the species. The darker the red, the more endangered the species is.
+        Endangered species are distributed across the globe, not confined to any specific location. 
+        Understanding the geographic distribution of endangered species helps us focus our conservation efforts more effectively. 
+        The interactive map below illustrates the worldwide distribution of endangered species. 
+        Each point on the map represents the location of a species, 
+        with the color of the points reflecting their conservation status — the darker the red, 
+        the more endangered the species. You can interact with the globe by rotating it, zooming in and out, 
+        and hovering over individual dots to see detailed information about each species. Additionally, 
+        you can switch to a 2D world map by clicking the toggle above.
       </p>
       
       {/* Conditionally render the map and text based on isToggled */}

@@ -22,9 +22,8 @@ function GamePage() {
     // const questions = quizzes;
     const [answers, setAnswers] = useState(Array(questions.length).fill(null));
     const [submitted, setSubmitted] = useState(false);
-    const [timeLeft, setTimeLeft] = useState(30);
+    const [timeLeft, setTimeLeft] = useState(180);
     const [hintsVisible, setHintsVisible] = useState(Array(questions.length).fill(false));
-    const [activeIndex, setActiveIndex] = useState(-1);
 
     useEffect(() => {
         if (timeLeft > 0) {
@@ -71,7 +70,7 @@ function GamePage() {
         setQuestions(getRandomQuizzes(quizzes)); // Update the questions if you're reshuffling
         setAnswers(Array(questions.length).fill(null));
         setSubmitted(false);
-        setTimeLeft(30);
+        setTimeLeft(180);
         setHintsVisible(Array(questions.length).fill(false));
         navigate("/project-2024-group-era/game"); // Navigate back to the game
     };
@@ -160,7 +159,7 @@ function GamePage() {
     }
 
     const drainStyle = {
-        width: `${(timeLeft / 30) * 100}%`,
+        width: `${(timeLeft / 180) * 100}%`,
     };
 
     // Replace newlines in hint with <br /> tags for HTML rendering

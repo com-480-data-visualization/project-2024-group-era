@@ -29,7 +29,7 @@ const ThreatsSection = () => {
     <div id="threats">
       <div className="section-container">
         <h1 className="title">What is the top 5 threats to endangered Species?</h1>
-        <p className='pt-10 text-justify px-20'>Learn about the top five threats to endangered species and their counts. The data is based on the IUCN Red List of Threatened Species.</p>
+        <p className='pt-10 text-justify px-20'>Today's wildlife is in peril, facing a variety of threats that challenge their survival. What is causing species endangerment? While some threats are natural, such as disease, the visualization below reveals that the primary culprits are human activities. You can hover over each bar in the chart to get a detailed explanation of each type of threat. Let's work together to help animals overcome these threats.</p>
           <div className='w-full px-20'>
               <ResponsiveContainer height={500}>
                 <BarChart layout="vertical" data={data} margin={{ top: 20, right: 0, bottom: 20, left: 0 }}>

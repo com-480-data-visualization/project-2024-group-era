@@ -11,7 +11,17 @@ const ActionsSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-20">
           <div className="w-full lg:w-1/2">
             <p className="px-20 text-justify">
-            This section presents packed circles categorizing the various conservation actions undertaken to protect endangered species. Each circle represents a different category of action, with its size reflecting the number of animals that benefit from that type of action. This visualization is challenging because the original actions data in our dataset are textual descriptions, not categories. To solve this problem, we first utilized a large language model to classify actions data and then created a Python script to count each category. To implement circle packing, we used D3.js. Currently, it is a static visualization, we will make it interactive, such as allowing visitors to zoom in and out, in the next milestone.
+              A wondrous variety of wildlife enriches our lives in many ways. Let us take action now 
+              to protect endangered species. These packed circles represent conservation efforts for 
+              endangered species, where each circle indicates a category of action. Click to zoom in 
+              and reveal subcategories. The size of each circle reflects the number of animals that 
+              benefit from these actions. The larger the circle, the wider the impact of this action on 
+              endangered species. 
+              <br />< br />
+              In our original dataset, conservation actions for each species were described textually, 
+              making it difficult to determine their categories and importance. Therefore, we used 
+              a large language model (LLM) to classify and quantify the conservation actions, enabling 
+              us to present this clear visualization.
             </p>
           </div>
           <div className="chart-container">
