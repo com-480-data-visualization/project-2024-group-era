@@ -225,7 +225,7 @@ const AnimalPage = () => {
             <div>
               <h1 className="my-4 text-xl font-bold flex">
                 <Sprout className='mr-4' size={24} />
-                <span>Habitad</span>
+                <span>Habitat</span>
               </h1>
               <div dangerouslySetInnerHTML={{ __html: selectedAnimal.habitat }} />
             </div>
