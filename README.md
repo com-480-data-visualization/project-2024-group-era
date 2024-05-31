@@ -190,7 +190,7 @@ As we have deployed our website, so you don't need additional technical setup, y
 
 [website](https://com-480-data-visualization.github.io/project-2024-group-era/) 
 
-[screencast](https://drive.google.com/file/d/1Vv_gOvWFEPWFsLSTlHQiTQAiNW2_4L7t/view?usp=sharing) 
+[screencast](https://drive.google.com/file/d/11AJCtzCCMKzNBpSxJJ2XZm0lHWBTJYmA/view?usp=sharing) 
 
 [process book](https://github.com/com-480-data-visualization/project-2024-group-era/blob/main/process_book.pdf)
 
