@@ -186,7 +186,7 @@ You can find our website at the following link: [website](https://com-480-data-v
 
 **80% of the final grade**
 
-As we have deployed our website, so you don't need additional technical setup, you can get access to our website, screencast, and process book by following links:
+As we have deployed our website, so you don't need any additional technical setup, you can get access to our website, screencast, and process book by following links:
 
 [website](https://com-480-data-visualization.github.io/project-2024-group-era/) 
 
